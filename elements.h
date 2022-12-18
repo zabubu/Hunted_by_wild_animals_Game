@@ -5,6 +5,7 @@
 #include <iostream>
 #include "position.h"
 
+//des elements
 
 class elements
 {
