@@ -1,4 +1,5 @@
 #include "elements.h"
+//des elements du terrain
 
 elements::elements(const position &pos, const std::string n&om) : d_pos{pos}, d_nom{nom}
 {
