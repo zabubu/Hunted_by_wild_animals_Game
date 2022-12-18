@@ -6,6 +6,8 @@
 #include "elements.h"
 #include "grille.h"
 
+//terrain de jeu
+
 
 class terrain : public grille
 {

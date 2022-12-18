@@ -2,6 +2,7 @@
 #include <sstream>
 #include <string>
 
+//terrain de jeu
 terrain::terrain() : grille{0, 0},
                      nombreElements{0},
                      nombreFauves{0},
