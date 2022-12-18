@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 
+//grille de jeu
 class grille
 {
 public :

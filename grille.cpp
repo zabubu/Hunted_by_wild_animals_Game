@@ -1,4 +1,5 @@
 #include "grille.h"
+//grille de jeu
 
 grille::grille(int hauteur, int largeur) : d_hauteur{hauteur}, d_largeur{largeur}
 {
