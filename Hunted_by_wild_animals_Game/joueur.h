@@ -46,9 +46,23 @@ class joueur : public element
         * @return position joueur 
         */
 	position position();
+    /**
+        * @brief fonction of joueur
+        * 
+        * @return life joueur 
+        */
+    bool isAlive() const;
+        /**
+        * @brief fonction of joueur
+        * 
+        * kill joueur 
+        */
+    void KillJoueur() ;
 	private :
 	//The position of the joueur.
 	position d_pos;
+    //life joueur.
+    bool d_alive;
 }
 
 
