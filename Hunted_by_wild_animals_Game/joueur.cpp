@@ -1,13 +1,13 @@
 #include "joueur.h"
 
-//---------- Constructors------------------------------
+//---------- Constructors----------------------------
 joueur::joueur():d_pos{0,0}{}
 
 joueur::joueur(const position &p):d_pos{p.positionX,p.positionY}{}
 
 joueur::joueur(int x,int y):d_pos{x,y}{}
 
-//---------- End of constructors-----------------------
+//---------- End of constructors---------------------
 
 void joueur::deplaceVers(int x,int y)
 {
