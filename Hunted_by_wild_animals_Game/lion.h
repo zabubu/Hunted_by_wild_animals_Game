@@ -6,8 +6,5 @@ class lion : public fauves
 {
     public : 
     void deplaceVers(const joueur &j) override;
-    bool deplacementAutorise(const position &p)override;
 }
-
-
 #endif
