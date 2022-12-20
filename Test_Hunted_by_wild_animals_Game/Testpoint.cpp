@@ -14,9 +14,8 @@ TEST_CASE("0 - Test de la classe position")
 {
     double x = 6.1, y = 5.8;
     double random_double = 10.5;
-    point Testpoint{x, y};
-    point p_2 {5,2.2};
-    point pointTestVide{};
+    position Testposition{x, y};
+    position pT {5,2.2};
     SUBCASE("Test du constructeur")
     {
         REQUIRE(p.renvoyerX() == x);
@@ -29,12 +28,12 @@ TEST_CASE("0 - Test de la classe position")
     }
     SUBCASE("Test de l'operator ==")
     {
-        point p{6.1,5.8};
-        REQUIRE_EQ(p, Testpoint);
+        position p{6.1,5.8};
+        REQUIRE_EQ(p, Testposition);
     }
     SUBCASE("Test de l'operator !=")
     {
-        REQUIRE_NE(p_2, Testpoint);
+        REQUIRE_NE(pT, Testposition);
     }
 }
 
