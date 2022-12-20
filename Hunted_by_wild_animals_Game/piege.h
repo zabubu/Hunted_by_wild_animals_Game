@@ -1,21 +1,21 @@
 #ifndef PIEGE_H
 #define PIEGE_H
-
+#include <iostream>
 #include "Position.h"
 
 class piege
 {
     public:
-        piege (const Position &pos, int nbMaxDeUtilisation, const string &type);
+        piege(const position &pos, int nbMaxDeUtilisation, const std::string &type);
         int nbDeUtilisation () const;
         int nbMaxDeUtilisation () const;
-        void modifierPosition (int x, int y);
+        void modifierPosition (const position& p);
 
     private:
-        Position d_position;
+        position d_position;
         int d_nbDeUtilisation;
         int d_nbMaxDeUtilisation;
-        string d_type;
+        std::string d_type;
 };
 
 #endif // PIEGE_H

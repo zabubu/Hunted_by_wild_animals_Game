@@ -2,7 +2,7 @@
 #define POSITION_H
 #include<cmath>
 
-class Position
+class position
 {
     public:
     /**
@@ -12,19 +12,19 @@ class Position
             * @param y : int
             * @return Create a position with x and y
             */
-        Position(int x=0,int y=0);
+        position(int x=0,int y=0);
     /**
             * @brief fonction of position
             *
             * @return  x
             */
-        double renvoyerX()const;
+        double x()const;
     /**
             * @brief fonction of position
             *
             * @return  y
             */
-        double renvoyerY()const;
+        double y()const;
     /**
             * @brief fonction of position
             *
@@ -44,7 +44,7 @@ class Position
             *
             *   @return  distance
             */
-        double renvoyerDistance(const Position& p)const;
+        double renvoyerDistance(const position& p)const;
     /**
             * @brief operator of position
             *

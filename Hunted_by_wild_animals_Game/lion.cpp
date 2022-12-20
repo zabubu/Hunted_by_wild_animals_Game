@@ -1,9 +1,10 @@
 #include "lion.h"
-lion::deplaceVers(const joueur &j)
+/*void lion::deplaceVers(const joueur &j)
 {
-    
+    position p{}=trouvePosition(j);
     if(DeplacementAutorise(p))
     {
     deplaceEn(p);
     }
 }
+*/

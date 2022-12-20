@@ -1,7 +1,7 @@
 #include "obstacle.h"
 
-obstacle::obstacle (const Position &pos, const string &type) :
-    d_position{pos.renvoyerX(), pos.renvoyerY()}, d_type{type}
+obstacle::obstacle (const position &pos, const std::string &type) :
+    d_position{pos.x(), pos.y()}, d_type{type}
 {}
 
 void obstacle::modifierPosition (int x, int y)

@@ -19,9 +19,9 @@ public :
     double nombrePieges() const;
     double nombreMaxFauves() const;
     double nombreMaxPieges() const;
-    const vector<vector<std::unique_ptr<object>>>& tabElements() const;
-    const vector<std::unique_ptr<fauve>>& tabFauves() const;
-    const vector<std::unique_ptr<pieges>& tabPieges() const;
+    std::vector<std::vector<std::unique_ptr<elements>> tabElements() const;
+    std::vector<std::unique_ptr<fauves>> tabFauves() const;
+    std::vector<std::unique_ptr<piege>> tabPieges() const;
     void modifierNbFauvesMax(int FMax);
     void modifierNbPiegesMax(int PMax);
     void ajouterElement(std::unique_ptr<elements> elem, int i, int j);

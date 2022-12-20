@@ -1,15 +1,25 @@
 #include "elements.h"
 //des elements du terrain
 
-elements::elements(const position &pos, const std::string n&om) : d_pos{pos}, d_nom{nom}
+elements::elements(const std::string& type) : d_pos{}, d_nom{type}
 {
 
 }
 
-void elements::changePosition(int i, int j)
+elements::elements(int x, int y,const std::string &nom) : d_pos{x,y}, d_nom{nom}
 {
-  d_pos.modifieI(i);
-  d_pos.modifieJ(j);
+
+}
+
+elements::elements(const position &pos, const std::string &nom) : d_pos{pos}, d_nom{nom}
+{
+
+}
+
+void elements::changePosition(const position& p)
+{
+  d_pos.modifierX(p.x());
+  d_pos.modifierY(p.y());
 }
 
 void elements::affiche(std::ostream &ost) const

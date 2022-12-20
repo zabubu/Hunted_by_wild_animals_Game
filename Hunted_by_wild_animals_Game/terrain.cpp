@@ -3,12 +3,12 @@
 #include <string>
 
 //terrain de jeu
-terrain::terrain() : grille{0, 0},
-                     nombreElements{0},
-                     nombreFauves{0},
-                     nombrePieges{0},
-                     nombreMaxFauves{0},
-                     nombreMaxPieges{0}
+terrain::terrain() : grille{0,0},
+                     d_nombreElements{0},
+                     d_nombreFauves{0},
+                     d_nombrePieges{0},
+                     d_nombreMaxFauves{0},
+                     d_nombreMaxPieges{0}
 {}
 
 
@@ -100,7 +100,7 @@ void terrain::ajouterElement(std::unique_ptr<elements> elem, int i, int j)
     {
         if(!d_elems[i][j].get())
         {
-            if(dynamic_cast<fauves*>(elem.get()))
+            if(dynamic_cast<fauves>(elem.get()))
             {
                 d_nombreFauves++;
             }

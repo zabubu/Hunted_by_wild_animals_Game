@@ -1,16 +1,17 @@
 #ifndef OBSTACLE_H
 #define OBSTACLE_H
-
+#include <iostream>
+#include "position.h"
 
 class obstacle
 {
     public:
-        obstacle (const Position &pos, const string &type);
+        obstacle(const position &pos, const std::string &type);
         void modifierPosition (int x, int y);
 
     private:
-        Position d_position;
-        string d_type;
+        position d_position;
+        std::string d_type;
 };
 
 #endif // OBSTACLE_H
