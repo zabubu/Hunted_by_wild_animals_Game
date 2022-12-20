@@ -13,8 +13,7 @@ using std::string;
 TEST_CASE("0 - Test de la classe grille")
 
     int x = 6, y = 5;
-    grille Testgrille{x, y};
-    grille g {8,2};
+    grille g {x,y};
     SUBCASE("Test du constructeur")
     {
         REQUIRE(g.renvoiHauteur() == x);
