@@ -43,6 +43,13 @@ bool position::operator!=(const position& p) const
     return (x() != p.x()) || (y() != p.y());
 }
 
-
-
+position& position::operator=(const position& p)
+{
+    if(this != &p)
+    {
+        d_x = p.x();
+        d_y = p.y();
+    }
+    return *this;
+}
 
