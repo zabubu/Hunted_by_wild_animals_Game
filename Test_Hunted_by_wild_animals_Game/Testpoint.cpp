@@ -13,7 +13,6 @@ using std::string;
 TEST_CASE("0 - Test de la classe position")
 {
     double x = 6.1, y = 5.8;
-    double random_double = 10.5;
     position Testposition{x, y};
     position pT {5,2.2};
     SUBCASE("Test du constructeur")
