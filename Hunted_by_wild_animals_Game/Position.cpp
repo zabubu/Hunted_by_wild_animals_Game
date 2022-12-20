@@ -32,3 +32,17 @@ double Position::renvoyerDistance(const Position& p)const
 {
     return sqrt(  ( (d_x-p.renvoyerX()) * (d_x-p.renvoyerX()) ) + ( (d_y-p.renvoyerY()) * (d_y-p.renvoyerY()) )   );
 }
+
+bool position::operator==(const position& p) const
+{
+    return (d_x == p.x()) && (d_y == p.y());
+}
+
+bool position::operator!=(const position& p) const
+{
+    return (x() != p.x()) || (y() != p.y());
+}
+
+
+
+

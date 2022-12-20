@@ -45,7 +45,20 @@ class Position
             *   @return  distance
             */
         double renvoyerDistance(const Position& p)const;
-
+    /**
+            * @brief operator of position
+            *
+            *   @param p : position
+            *
+            */
+        bool operator==(const position& p) const;
+    /**
+            * @brief operator of position
+            *
+            *   @param p : position
+            *
+            */
+        bool operator!=(const position& p) const;
     private:
     //The position of the joueur x:columns / y:rows
         double d_x;
