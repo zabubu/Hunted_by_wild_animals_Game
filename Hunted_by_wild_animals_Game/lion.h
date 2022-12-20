@@ -1,18 +1,13 @@
 #ifndef LION_H
 #define LION_H
+#include "fauves.h"
 
 class lion : public fauves
 {
-	public :
-	lion();
-	lion(const position &p);
-	lion(int x,int y);
-	void deplaceVers(const joueur &j) override;
-	position position();
-	private :
-	position d_pos;
+    public : 
+    void deplaceVers(const joueur &j) override;
+    bool deplacementAutorise(const position &p)override;
 }
 
 
-#endif // LION_H
-
+#endif
