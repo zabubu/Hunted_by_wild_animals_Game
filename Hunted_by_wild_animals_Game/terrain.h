@@ -9,8 +9,7 @@
 //terrain de jeu
 
 
-class terrain : public grille
-{
+class terrain : public grille {
 public :
     terrain();
     terrain(int hauteur, int largeur, int nbElem, int nbMaxFauves, int nbMaxPieges);
@@ -19,13 +18,10 @@ public :
     double nombrePieges() const;
     double nombreMaxFauves() const;
     double nombreMaxPieges() const;
-    std::vector<std::vector<std::unique_ptr<elements>> tabElements() const;
-    std::vector<std::unique_ptr<fauves>> tabFauves() const;
-    std::vector<std::unique_ptr<piege>> tabPieges() const;
     void modifierNbFauvesMax(int FMax);
     void modifierNbPiegesMax(int PMax);
-    void ajouterElement(std::unique_ptr<elements> elem, int i, int j);
-    void supprimerElement(int i, int j);
+   /* void ajouterElement(std::unique_ptr<elements> elem, int i, int j);
+    void supprimerElement(int i, int j);*/
 private :
     int d_nombreElements;
     int d_nombreFauves;

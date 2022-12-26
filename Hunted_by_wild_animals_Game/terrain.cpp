@@ -26,25 +26,6 @@ terrain::terrain(int largeur, int hauteur, int nbElem, int nbMaxFauves, int nbMa
    }
 }
 
-terrain::terrain(const terrain &t) :  grille{t.renvoiHauteur(), t.renvoiLargeur},
-                                      d_nombreElements{t.nombreElements()},
-                                      d_nombreFauves{t.nombreFauves()},
-                                      nombrePieges{t.nombrePieges()},
-                                      nombreMaxFauves{t.nombreMaxFauves()},
-                                      nombreMaxPieges{t.nombreMaxPieges()}
-{
-    d_elems.resize(hauteur);
-    for(int i=0; i<hauteur; i++)
-    {
-        elems[i].resize(largeur);
-        for(int j=0; j<t.tabElements()[i].size(); j++)
-        {
-            auto elem = t.tabElements[i][j].get()->clone();
-            elems[i][j] = std::move(elem);
-        }
-    }
-}
-
 double terrain::nombreElements() const
 {
     return d_nombreElements;
@@ -70,11 +51,6 @@ double terrain::nombreMaxPieges() const
     return d_nombreMaxPieges;
 }
 
-const vector<vector<std::unique_ptr<object>>>& terrain::tabElements() const
- {
-     return d_elems;
- }
-
 
 void terrain::modifierNbFauvesMax(int FMax)
 {
@@ -86,7 +62,7 @@ void terrain::modifierNbPiegesMax(int PMax)
     d_nombreMaxPieges = PMax;
 }
 
-void terrain::ajouterElement(std::unique_ptr<elements> elem, int i, int j)
+/*void terrain::ajouterElement(std::unique_ptr<elements> elem, int i, int j)
 {
     if(i > d_hauteur)
     {
@@ -106,50 +82,6 @@ void terrain::ajouterElement(std::unique_ptr<elements> elem, int i, int j)
             }
             d_elems[i][j] = move(elem);
             d_nombreElements++;
-        }
-    }
-}
-
-
-const vector<std::unique_ptr<fauve>>& terrain::tabFauves() const
-{
-    vector<std::unique_ptr<fauve>> tabFauves;
-
-    for(int i = 0 ; i < d_hauteur ; i++)
-    {
-        for(int j = 0 ; j < d_largeur ; j++)
-        {
-            auto elem = d_elems[i][j].get();
-            if(elem)
-            {
-                if(dynamic_cast<fauve*>(elem))
-                {
-                    tabFauves.push_back(*dynamic_cast<fauve*>(elem));
-                }
-            }
-        }
-    }
-}
-
-
-
-
-const vector<std::unique_ptr<pieges>& terrain::tabPieges() const
-{
-    vector<std::unique_ptr<pieges>> tabPieges;
-
-    for(int i = 0 ; i < d_hauteur ; i++)
-    {
-        for(int j = 0 ; j < d_largeur ; j++)
-        {
-            auto elem = d_elems[i][j].get();
-            if(elem)
-            {
-                if(dynamic_cast<pieges*>(elem))
-                {
-                    tabPieges.push_back(*dynamic_cast<pieges*>(elem));
-                }
-            }
         }
     }
 }
@@ -183,7 +115,7 @@ void terrain::supprimerElement(int i, int j)
         }
     }
 }
-
+*/
 
 
 

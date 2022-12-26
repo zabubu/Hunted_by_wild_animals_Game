@@ -14,8 +14,8 @@ int piege::nbMaxDeUtilisation () const
     return d_nbMaxDeUtilisation;
 }
 
-void piege::modifierPosition (const position& p)
+/*void piege::modifierPosition (const position& p)
 {
     d_position.modifierX(p.x());
     d_position.modifierY(p.y());
-}
+}*/

@@ -1,0 +1,85 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\main.cpp
+	<iostream>
+
+1671563294 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\elements.cpp
+	"elements.h"
+
+1671736601 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\elements.h
+	<istream>
+	<string>
+	<iostream>
+	"memory"
+	"position.h"
+
+1671563294 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\position.h
+	<cmath>
+
+1671563294 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\position.cpp
+	"position.h"
+
+1671563294 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\grille.cpp
+	"grille.h"
+
+1671563294 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\grille.h
+	<iostream>
+	<string>
+
+1671737456 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\terrain.cpp
+	"terrain.h"
+	<sstream>
+	<string>
+
+1671737456 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\terrain.h
+	<memory>
+	<vector>
+	"elements.h"
+	"grille.h"
+
+1671563294 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\fauves.cpp
+	"fauves.h"
+
+1671737693 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\fauves.h
+	"position.h"
+	"elements.h"
+	"joueur.h"
+
+1671563294 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\joueur.h
+	"position.h"
+	"elements.h"
+
+1671737700 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\joueur.cpp
+	"joueur.h"
+
+1671563294 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\tigre.cpp
+	"tigre.h"
+
+1671563294 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\tigre.h
+	"fauves.h"
+
+1671563294 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\lion.cpp
+	"lion.h"
+
+1671563294 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\lion.h
+	"fauves.h"
+
+1671738022 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\obstacle.cpp
+	"obstacle.h"
+
+1671738014 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\obstacle.h
+	<iostream>
+	"position.h"
+
+1671738061 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\piege.cpp
+	"piege.h"
+
+1671563294 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\piege.h
+	<iostream>
+	"Position.h"
+
+1671808084 source:c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\jeu.cpp
+	"jeu.h"
+
+1671806137 c:\users\samol\onedrive\bureau\hunted_by_wild_animals_game\include\jeu.h
+	<iostream>
+
