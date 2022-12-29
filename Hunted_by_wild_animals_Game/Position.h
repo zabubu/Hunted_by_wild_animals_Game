@@ -1,75 +1,24 @@
 #ifndef POSITION_H
 #define POSITION_H
-#include<cmath>
+
+#include <fstream>
 
 class position
 {
-    public:
-    /**
-            * @brief Constructor of joueur
-            *
-            * @param x : int
-            * @param y : int
-            * @return Create a position with x and y
-            */
-        position(int x=0,int y=0);
-    /**
-            * @brief fonction of position
-            *
-            * @return  x
-            */
-        double x()const;
-    /**
-            * @brief fonction of position
-            *
-            * @return  y
-            */
-        double y()const;
-    /**
-            * @brief fonction of position
-            *
-            *   change x
-            */
-        void modifierX(double x);
-    /**
-            * @brief fonction of position
-            *
-            *   change x
-            */
-        void modifierY(double y);
-    /**
-            * @brief fonction of position
-            *
-            *   @param p : position
-            *
-            *   @return  distance
-            */
-        double renvoyerDistance(const position& p)const;
-    /**
-            * @brief operator of position
-            *
-            *   @param p : position
-            *
-            */
-        bool operator==(const position& p) const;
-    /**
-            * @brief operator of position
-            *
-            *   @param p : position
-            *
-            */
-        bool operator!=(const position& p) const;
-    /**
-            * @brief operator of position
-            *
-            *   @param p : position
-            *
-            */
-        position& operator=(const position& p);
-    private:
-    //The position of the joueur x:columns / y:rows
-        double d_x;
-        double d_y;
+public:
+    position();
+    position(int i, int j);
+    position (const position &p);
+    int i() const;
+    int j() const;
+    void modifieI(int i);
+    void modifieJ(int j);
+    void affiche(std::ostream &ost) const;
+
+private:
+    int d_i, d_j;
 };
+
+
 
 #endif // POSITION_H
