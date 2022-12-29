@@ -1,55 +1,44 @@
 #include "position.h"
-
-//---------- Constructors----------------------------
-position::position(int x,int y):
-    d_x{x},
-    d_y{y}
+position::position() : d_i{0}, d_j{0}
 {
-}
-//---------- End of constructors---------------------
 
-void position::modifierX(double x)
-{
-    d_x=x;
 }
 
-void position::modifierY(double y)
+position::position(int i, int j) : d_i{i}, d_j{j}
 {
-     d_y=y;
+
 }
 
-double position::x()const
+
+position::position(const position &p) : d_i{p.i()}, d_j{p.j()}
 {
-  return d_x;
+
 }
 
-double position::y()const
+int position::i() const
 {
-   return d_y;
+    return d_i;
 }
 
-double position::renvoyerDistance(const position& p)const
+int position::j() const
 {
-    return sqrt(  ( (d_x-p.x()) * (d_x-p.x()) ) + ( (d_y-p.y()) * (d_y-p.y()) )   );
+    return d_j;
 }
 
-bool position::operator==(const position& p) const
+void position::modifieI(int i)
 {
-    return (d_x == p.x()) && (d_y == p.y());
+    d_i=i;
 }
 
-bool position::operator!=(const position& p) const
+void position::modifieJ(int j)
 {
-    return (x() != p.x()) || (y() != p.y());
+    d_j = j;
 }
 
-position& position::operator=(const position& p)
+void position::affiche(std::ostream &ost) const
 {
-    if(this != &p)
-    {
-        d_x = p.x();
-        d_y = p.y();
-    }
-    return *this;
+    ost<<"["<<d_i<<";"<<d_j<<"]";
 }
+
+
 
