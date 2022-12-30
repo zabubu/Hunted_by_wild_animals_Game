@@ -306,13 +306,7 @@ void terrain::creeTerrain()
         std::cout<<"Type de joueur :  E (expert) ou N (normal)"<<std::endl;
         std::cin>>type;
 
-        int nbFauves = nbLions+nbTigres;
-        int nbElements = nbLions+nbTigres+nbArbres+nbPieges;
-
         taille(hauteur,largeur);
-        modifierNbElements(nbElements);
-        modifierNbFauves(nbFauves);
-        modifierNbPieges(nbPieges);
 
 
         int lig,col;
@@ -370,7 +364,7 @@ void terrain::creeTerrain()
 
             if(type == 'E')
             {
-                    auto e{std::make_unique<joueurExpert>(p)};
+                    auto e{std::make_unique<joueurNormal>(p)};
                     ajouterElement(std::move(e),p);
             }
             else if(type == 'N')

@@ -30,8 +30,8 @@ void interfaceT::afficheTerrain(const terrain& ter) const
         }
         std::cout<<std::endl;
     }
-    std::cout<<std::endl<<"Nombre de fauves = "<<ter.nombreFauves()<<std::endl;
-    std::cout<<"Nombre d'elements"<<ter.nombreElements();
+    std::cout<<"Nombre de fauves = "<<ter.nombreFauves()<<std::endl;
+    std::cout<<"J = joueur  L = lion  T = tigre  P = piege  A = arbre"<<std::endl;
 
 }
 

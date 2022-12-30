@@ -72,14 +72,16 @@ void menu::choixTerrain(std::string &nomF)
     int choix;
     do
     {
-        std::cout<<"======================Terrain par défaut====================="<<std::endl;
+        std::cout<<"======================Terrain par defaut====================="<<std::endl;
         printGround("Terrain2.txt");
         std::cout<<std::endl;
         std::cout<<"================Terrain importe depuis fichier================"<<std::endl;
+        std::cout<<"=============================================================="<<std::endl;
         std::cout<<std::endl;
         std::cout<<"=====================Terrain personnalise====================="<<std::endl;
+        std::cout<<"=============================================================="<<std::endl;
         std::cout<<std::endl;
-        std::cout<<"======================CHOIX DU TERRAIN======================="<<std::endl;
+        std::cout<<std::endl;
         std::cout<<"1 - Terrain par defaut"<<std::endl;
         std::cout<<"2 - Terrain importe depuis fichier"<<std::endl;
         std::cout<<"3 - Terrain personnalise"<<std::endl;
@@ -94,7 +96,7 @@ void menu::choixTerrain(std::string &nomF)
         else if(choix == 2)
         {
              d_numTerrain = 2;
-             std::cout<<"Entrer le nom du fichier sans oublier l'extension"<<std::endl;
+             std::cout<<"Entrer le nom du fichier"<<std::endl;
              std::cin>>nomF;
              printGround(nomF);
              std::cout<<std::endl;
@@ -119,16 +121,12 @@ void menu::menuPrincipale()
     std::string nomF;
     do
     {
-        std::cout<<"====================== HUNTED BY WILD ANIMALS GAME ====================="<<std::endl;
-
-        if(choixI == false)
-            std::cout<<"Choisir un mode graphique   --  Taper 1"<<std::endl;
-
-        if(choixI && choixT==false)
-            std::cout<<"Choisir un terrain    --    Taper 2"<<std::endl;
+        std::cout<<"====================== HUNTED BY WILD ANIMALS GAME ====================="<<std::endl<<std::endl;
+        std::cout<<"1 - Choisir un mode graphique"<<std::endl;
+        std::cout<<"2 - Choisir un terrain"<<std::endl;
 
         if(choixI && choixT)
-            std::cout<<"Lancer une partie   --  Taper 3"<<std::endl;
+            std::cout<<"3 - Lancer une partie"<<std::endl;
 
         std::cin>>choix;
 
@@ -151,7 +149,7 @@ void menu::menuPrincipale()
 
             if(d_numTerrain == 1)
             {
-                p.lireFichier("Terrain1.txt");
+                p.lireFichier("Terrain5");
             }
             else  if(d_numTerrain == 2)
             {

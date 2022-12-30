@@ -1,9 +1,20 @@
 #include <iostream>
+#include "menu.h"
+#include <string>
+#include <memory>
+#include <vector>
 
-using namespace std;
+
+
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+
+    menu m{};
+    m.menuPrincipale();
+
+
+//joueur expert terrain perso
+
+
 }

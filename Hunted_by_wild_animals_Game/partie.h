@@ -37,6 +37,9 @@ public :
     int situationJExpert(const position &p, terrain &t, std::unique_ptr<joueurExpert> elem) const;
     int situationJNormal(const position &p, terrain &t, std::unique_ptr<joueurNormal> elem) const;
 
+    std::vector<int> directionDeplacementTigre(const position &posJoueur, std::unique_ptr<tigre> elem) const;
+    std::vector<int> directionDeplacementLion(const position &posJoueur, std::unique_ptr<lion> elem) const;
+
     void lireFichier(const std::string& nomFichier);
     void affiche() const;
     void nouveauTerrain();

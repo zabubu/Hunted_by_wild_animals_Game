@@ -1,60 +1,26 @@
 #ifndef JOUEUR_H
 #define JOUEUR_H
 
+#include <iostream>
 #include "position.h"
-#include "elements.h"
+#include "elementsDeplacable.h"
+class interface;
 
-class joueur : public elements
+
+
+class joueur : public elementsDeplacable
 {
-	public :
-	/**
-        * @brief Constructor of joueur
-        *
-        *
-        * @return Create a joueur with position
-        */
-	joueur();
-	/**
-        * @brief Constructor of joueur
-        *
-        * @param position : position (const point)
-        *
-        * @return Create a joueur with position
-        */
-	joueur(const position &p);
-	/**
-        * @brief Constructor of joueur
-        *
-        * @param x : int
-        * @param y : int
-        *
-        * @return Create a joueur with position
-        */
-	joueur(int x,int y);
-		/**
-        * @brief fonction of joueur
-        *
-        * @param x : int
-        * @param y : int
-        *
-        * @return position joueur
-        */
-	position position();
-    /**
-        * @brief fonction of joueur
-        *
-        * @return life joueur
-        */
-    bool isAlive() const;
-        /**
-        * @brief fonction of joueur
-        *
-        * kill joueur
-        */
-    void KillJoueur();
-	private :
-    bool d_alive;
+    public :
+    joueur(const position & pos);
+    position avanceVers(int i) override =0;
+    int deplaceEn(const position &pos, terrain &t) override = 0;
+    std::unique_ptr<elements> clone() override =0;
+    void affiche(const interface &inter) const override =0;
+
 };
 
 
+
 #endif // JOUEUR_H
+
+
