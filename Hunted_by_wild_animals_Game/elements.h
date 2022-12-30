@@ -13,10 +13,10 @@ class terrain;
 class elements
 {
 public :
-   ~elements() = default;
+   virtual ~elements(){};
    elements(const position &pos);
    position posElem() const;
-   void changePosition (int i, int j);
+   void changePosition (const position &pos);
    virtual void affiche(const interface &inter) const=0;
    virtual std::unique_ptr<elements> clone() =0;
 

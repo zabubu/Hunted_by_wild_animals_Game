@@ -7,10 +7,10 @@ elements::elements(const position &pos) : d_pos{pos}
 
 }
 
-void elements::changePosition(int i, int j)
+void elements::changePosition(const position &p)
 {
-  d_pos.modifieI(i);
-  d_pos.modifieJ(j);
+  d_pos.modifieI(p.i());
+  d_pos.modifieJ(p.j());
 }
 
 position elements::posElem() const
