@@ -11,14 +11,14 @@ using std::string;
 
 TEST_CASE("Construction du piège")
 {
-        SUB_CASE("L'arbre est construit à un point donné")
+        SUB_CASE("Le piège est construit à un point donné")
         {
             pieges p{position{14, 9}};
             REQUIRE_EQ(p.posElem().i(), 14);
             REQUIRE_EQ(p.posElem().j(), 9);
         }
 
-        SUB_CASE("L'arbre est construit à (0;0)")
+        SUB_CASE("Le piège est construit à (0;0)")
         {
             pieges p{};
             REQUIRE_EQ(p.posElem().i(), 0);
