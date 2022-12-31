@@ -14,11 +14,9 @@ class tigre : public fauves
 {
     public :
     tigre(const position &pos);
-    position avanceVers(int i) override;
-    int deplaceEn(const position &pos, terrain &t) override;
     std::unique_ptr<elements> clone() override;
     void affiche(const interface &inter) const override;
-    std::vector<int> directionDeplacement(const position &posJoueur) const override;
+    void deplace(terrain &t , int direction)override;
 
 };
 
