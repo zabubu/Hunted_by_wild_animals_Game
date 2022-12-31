@@ -7,6 +7,7 @@
 #include "lion.h"
 #include "tigre.h"
 #include "interface.h"
+#include "graphics.h"
 #include<memory>
 #include <iostream>
 
@@ -14,7 +15,9 @@
 class interfaceWinbgi : public interface
 {
     public :
+
          interfaceWinbgi();
+
     void afficheTerrain(const terrain& ter) const override;
     void afficheTigre(const tigre &t) const override;
     void afficheLion(const lion &l) const override;
@@ -22,7 +25,11 @@ class interfaceWinbgi : public interface
     void afficheArbres(const arbres& a) const override;
     void afficheJoueurExpert(const joueurExpert& a) const override;
     void afficheJoueurNormal(const joueurNormal& a) const override;
+
     private :
+        unsigned width, height;
+        void initialize();
+
 };
 
 

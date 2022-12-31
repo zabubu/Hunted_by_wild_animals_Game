@@ -6,16 +6,21 @@
 #include "arbres.h"
 #include "joueurNormal.h"
 #include "joueurExpert.h"
+#include "position.h"
 
 
+interfaceWinbgi::interfaceWinbgi():width{700},
+                                    height{700}
 
-interfaceWinbgi::interfaceWinbgi()
 {
-
+    initialize();
 }
+
 
 void interfaceWinbgi::afficheTerrain(const terrain& ter) const
 {
+    int caseWidth = 10; // Largeur d'une case en pixels
+    int caseHeight = 10; // Hauteur d'une case en pixels
 
     for(int i=0; i<ter.hauteur(); i++)
      {
@@ -27,42 +32,69 @@ void interfaceWinbgi::afficheTerrain(const terrain& ter) const
             }
             else
             {
-                std::cout<<".";
+                int x = j * caseWidth; // Coordonnées x du pixel à dessiner
+                int y = i * caseHeight; // Coordonnées y du pixel à dessiner
+                 putpixel(x, y, WHITE);
             }
         }
-        std::cout<<std::endl;
     }
-    std::cout<<std::endl<<"Nombre de fauves = "<<ter.nombreFauves()<<std::endl;
-    std::cout<<"Nombre d'elements"<<ter.nombreElements();
-
 }
 
 void interfaceWinbgi::afficheTigre(const tigre &t) const
 {
-    std::cout<<"T";
+    int caseWidth = 10; // Largeur d'une case en pixels
+    int caseHeight = 10; // Hauteur d'une case en pixels
+    int x=t.posElem().i();
+    int y=t.posElem().j();
+     putpixel(x*caseWidth, y*caseWidth, GREEN);
 }
 
 void interfaceWinbgi::afficheLion(const lion &l) const
 {
-    std::cout<<"L";
+    int caseWidth = 10; // Largeur d'une case en pixels
+    int caseHeight = 10; // Hauteur d'une case en pixels
+    int x=l.posElem().i();
+    int y=l.posElem().j();
+     putpixel(x*caseWidth, y*caseWidth, GREEN);
 }
 
 void interfaceWinbgi::affichePieges(const pieges &p) const
 {
-    std::cout<<"P";
+    int caseWidth = 10; // Largeur d'une case en pixels
+    int caseHeight = 10; // Hauteur d'une case en pixels
+    int x=p.posElem().i();
+    int y=p.posElem().j();
+     putpixel(x*caseWidth, y*caseWidth, GREEN);
 }
 
 void interfaceWinbgi::afficheArbres(const arbres& a) const
 {
-    std::cout<<"A";
+    int caseWidth = 10; // Largeur d'une case en pixels
+    int caseHeight = 10; // Hauteur d'une case en pixels
+    int x=a.posElem().i();
+    int y=a.posElem().j();
+     putpixel(x*caseWidth, y*caseWidth, GREEN);
 }
 
 void interfaceWinbgi::afficheJoueurExpert(const joueurExpert& a) const
 {
-    std::cout<<"E";
+    int caseWidth = 10; // Largeur d'une case en pixels
+    int caseHeight = 10; // Hauteur d'une case en pixels
+    int x=a.posElem().i();
+    int y=a.posElem().j();
+     putpixel(x*caseWidth, y*caseWidth, GREEN);
 }
 
 void interfaceWinbgi::afficheJoueurNormal(const joueurNormal& a) const
 {
-   std::cout<<"J";
+    int caseWidth = 10; // Largeur d'une case en pixels
+    int caseHeight = 10; // Hauteur d'une case en pixels
+    int x=a.posElem().i();
+    int y=a.posElem().j();
+     putpixel(x*caseWidth, y*caseWidth, GREEN);
+}
+
+void interfaceWinbgi::initialize()
+{
+    opengraphsize(width, height);
 }
