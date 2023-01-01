@@ -1,5 +1,4 @@
 #include "partie.h"
-
 partie::partie(std::unique_ptr<interface> inter) : d_t{}, d_inter{std::move(inter)}
 {
 
@@ -131,52 +130,8 @@ void partie::affiche() const
     d_inter->afficheTerrain(d_t);
 }
 
-position partie::newPosTigre(int i, std::unique_ptr<tigre> elem) const
-{
-         return elem->avanceVers(i);
-}
-position partie::newPosLion(int i, std::unique_ptr<lion> elem) const
-{
-     return elem->avanceVers(i);
-}
-position partie::newPosJExpert(int i, std::unique_ptr<joueurExpert> elem) const
-{
-     return elem->avanceVers(i);
-}
-position partie::newPosJNormal(int i, std::unique_ptr<joueurNormal> elem) const
-{
-    return elem->avanceVers(i);
-}
 
-int partie::situationTigre(const position &p, terrain &t, std::unique_ptr<tigre> elem) const
-{
-     return elem->deplaceEn(p,t);
-}
-
-int partie::situationLion(const position &p, terrain &t, std::unique_ptr<lion> elem) const
-{
-     return elem->deplaceEn(p,t);
-}
-
-int partie::situationJExpert(const position &p, terrain &t, std::unique_ptr<joueurExpert> elem) const
-{
-   return elem->deplaceEn(p,t);
-}
-
-int partie::situationJNormal(const position &p, terrain &t, std::unique_ptr<joueurNormal> elem) const
-{
-    return elem->deplaceEn(p,t);
-}
-
-std::vector<int> partie::directionDeplacementTigre(const position &posJoueur, std::unique_ptr<tigre> elem) const
-{
-    return elem->directionDeplacement(posJoueur);
-}
-
-std::vector<int> partie::directionDeplacementLion(const position &posJoueur, std::unique_ptr<lion> elem) const
-{
-     return elem->directionDeplacement(posJoueur);
-}
+/*
 
 void partie::joue()
 {
@@ -253,7 +208,8 @@ void partie::joue()
 
                                                if(dynamic_cast<tigre*>(elem))
                                                {
-                                                         s=0;
+                                                   deplaceTigre();
+                                                         /*s=0;
                                                          auto ti{std::make_unique<tigre>(p)};
                                                          std::vector<int> tabDirection = directionDeplacementTigre(p1,std::move(ti));
 
@@ -312,72 +268,6 @@ void partie::joue()
                                                                                s++;
                                                             }while(tourFini==false && s<tabDirection.size());
                                                }
-                                               else if(dynamic_cast<lion*>(elem))
-                                               {
-                                                        s=0;
-                                                        auto ti{std::make_unique<lion>(p)};
-                                                        std::vector<int> tabDirection = directionDeplacementLion(p1,std::move(ti));
-
-
-                                                         do
-                                                         {
-                                                           direction = tabDirection[s];
-                                                           auto l{std::make_unique<lion>(p)};
-                                                           position dir = newPosLion(direction, std::move(l));
-
-                                                           auto ll{std::make_unique<lion>(p)};
-                                                           int situation = situationLion(dir, d_t,std::move(ll));
-
-                                                                                          if(situation == 1)
-                                                                                           {
-                                                                                              tourFini = false;
-                                                                                           }
-                                                                                           else if(situation == 2)
-                                                                                           {
-                                                                                               position t = d_t.posJoueur();
-                                                                                               if(t.i()==dir.i() && t.j()==dir.j())
-                                                                                                   joueurMort=true;
-
-                                                                                             d_t.supprimerElement(p);
-                                                                                             d_t.supprimerElement(dir);
-                                                                                             auto elem{std::make_unique<lion>(dir)};
-                                                                                             d_t.ajouterElement(std::move(elem),dir);
-                                                                                             tourFini = true;
-
-
-                                                                                                 position asup{dir};
-                                                                                                 int k=0;
-                                                                                                 while(tabF[k].i() != asup.i() && tabF[k].j() != asup.j())
-                                                                                                 {
-                                                                                                     k++;
-                                                                                                 }
-                                                                                                 for(int l=k ; l<tabF.size();l++)
-                                                                                                 {
-                                                                                                     std::swap(tabF[l],tabF[l+1]);
-                                                                                                 }
-                                                                                                 tabF.resize(tabF.size()-1);
-                                                                                           }
-                                                                                            else if(situation == 3)
-                                                                                           {
-                                                                                             d_t.supprimerElement(p);
-                                                                                             tourFini = true;
-                                                                                              if(d_t.nombreFauves()==0)
-                                                                                               {
-                                                                                                   fauvesMorts==true;
-                                                                                                   break;
-                                                                                               }
-
-                                                                                           }
-                                                                                           else if(situation == 0)
-                                                                                           {
-                                                                                              auto elem{std::make_unique<lion>(dir)};
-                                                                                              d_t.ajouterElement(std::move(elem),dir);
-                                                                                              d_t.supprimerElement(p);
-                                                                                              tourFini = true;
-                                                                                           }
-                                                                                           s++;
-                                                       }while(tourFini==false && s<tabDirection.size());
-                                               }
                                                if(joueurMort == true )
                                                    break;
                                                std::cout<<"la"<<d_t.nombreFauves()<<std::endl;
@@ -412,5 +302,66 @@ void partie::joue()
     std::cout<<"Vous etes mort"<<std::endl;
    else
     std::cout<<"Vous avez gagne"<<std::endl;
+
+}
+*/
+
+void partie::joue()
+{
+           int direction;
+           affiche();
+           position posJoueur = d_t.posJoueur();
+           auto elem = d_t.tabElements()[posJoueur.i()][posJoueur.j()].get();
+
+
+           std::cout<<std::endl<<"Choisir une direction de deplacement"<<std::endl;
+
+           if(dynamic_cast<joueurNormal*>(elem))
+           {
+               std::cout<<"789"<<std::endl;
+               std::cout<<"4 6"<<std::endl;
+               std::cout<<"123"<<std::endl;
+               std::cin>>direction;
+
+               joueurNormal* j = dynamic_cast<joueurNormal*>(d_t.tabElements()[posJoueur.i()][posJoueur.j()].get());
+               j->deplace(d_t,direction);
+               affiche();
+           }
+
+           std::vector<position> positionFauves = d_t.tabPositionFauves();
+           int j=0;
+
+           do
+           {
+               positionFauves = d_t.tabPositionFauves();
+               position posFauves = positionFauves[j];
+
+               auto elem = d_t.tabElements()[posFauves.i()][posFauves.j()].get();
+
+               if(dynamic_cast<tigre*>(elem))
+               {
+                  tigre* t = dynamic_cast<tigre*>(d_t.tabElements()[posFauves.i()][posFauves.j()].get());
+                  t->deplace(d_t,direction);
+               }
+               else if(dynamic_cast<lion*>(elem))
+               {
+                  lion* l = dynamic_cast<lion*>(d_t.tabElements()[posFauves.i()][posFauves.j()].get());
+                  l->deplace(d_t,direction);
+               }
+
+
+               affiche();
+
+               positionFauves = d_t.tabPositionFauves();
+
+               if(positionFauves[j]==posFauves)
+               {
+                   std::cout<<std::endl<<"j++"<<std::endl;;
+                   j++;
+               }
+           }
+           while(j<positionFauves.size());
+
+
 
 }
