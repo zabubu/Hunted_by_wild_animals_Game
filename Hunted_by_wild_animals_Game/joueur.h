@@ -1,26 +1,17 @@
-#ifndef JOUEUR_H
-#define JOUEUR_H
+#ifndef JOUEURNORMALMOVER_H
+#define JOUEURNORMALMOVER_H
+#include "elementMover.h"
 
-#include <iostream>
-#include "position.h"
-#include "elementsDeplacable.h"
-class interface;
-
-
-
-class joueur : public elementsDeplacable
+class joueurNormalMover : public elementMover
 {
     public :
-    joueur(const position & pos);
-    position avanceVers(int i) override =0;
-    int deplaceEn(const position &pos, terrain &t) override = 0;
-    std::unique_ptr<elements> clone() override =0;
-    void affiche(const interface &inter) const override =0;
-
+    joueurNormalMover(int direction, const position &posElement);
+    position nouvellePositionPotentiel() override;
+    void deplace(terrain &t) override;
+    int situation(terrain &t) override;
+    position nouvellePosition(terrain &t) override;
 };
 
 
 
-#endif // JOUEUR_H
-
-
+#endif // JOUEURNORMALMOVER_H
