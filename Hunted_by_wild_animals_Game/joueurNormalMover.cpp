@@ -12,35 +12,35 @@ position joueurNormalMover::nouvellePositionPotentiel()
 {
     if(direction()==8)
     {
-        return position{positionElem().i()-1, positionElem().j()};
+        return position{positionElem().getI()-1, positionElem().getJ()};
     }
     else if(direction()==2)
     {
-       return position{positionElem().i()+1, positionElem().j()};
+       return position{positionElem().getI()+1, positionElem().getJ()};
     }
     else if(direction()==6)
     {
-       return position{positionElem().i(), positionElem().j()+1};
+       return position{positionElem().getI(), positionElem().getJ()+1};
     }
     else if(direction()==4)
     {
-       return position{positionElem().i(), positionElem().j()-1};
+       return position{positionElem().getI(), positionElem().getJ()-1};
     }
     else if(direction()==7)
     {
-       return position{positionElem().i()-1, positionElem().j()-1};
+       return position{positionElem().getI()-1, positionElem().getJ()-1};
     }
     else if(direction()==9)
     {
-       return position{positionElem().i()-1, positionElem().j()+1};
+       return position{positionElem().getI()-1, positionElem().getJ()+1};
     }
     else if(direction()==1)
     {
-      return position{positionElem().i()+1, positionElem().j()-1};
+      return position{positionElem().getI()+1, positionElem().getJ()-1};
     }
     else if(direction()==3)
     {
-       return position{positionElem().i()+1, positionElem().j()+1};
+       return position{positionElem().getI()+1, positionElem().getJ()+1};
     }
 
 }
@@ -76,7 +76,7 @@ void joueurNormalMover::deplace(terrain &t)
 
                  if(situation(t)==SITUATION_PEUT_SE_DEPLACER)
                  {
-                     int iAct=posActuelle.i(), jAct = posActuelle.j(), iNouv = nouvellePos.i(), jNouv = nouvellePos.j();
+                     int iAct=posActuelle.getI(), jAct = posActuelle.getJ(), iNouv = nouvellePos.getI(), jNouv = nouvellePos.getJ();
                      t.changeCase(iAct,jAct,iNouv,jNouv);
                  }
                  else if(situation(t)==SITUATION_MORT)

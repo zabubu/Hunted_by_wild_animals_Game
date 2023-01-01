@@ -9,14 +9,14 @@ public:
     position();
     position(int i, int j);
     position (const position &p);
-    int i() const;
-    int j() const;
-    void modifieI(int i);
-    void modifieJ(int j);
+    int getI() const;
+    int getJ() const;
+    void setI(int i);
+    void setJ(int j);
     void affiche(std::ostream &ost) const;
-      position& operator=(const position& p);
-      bool operator!=(const position& p) const;
-      bool operator==(const position& p) const;
+    position& operator=(const position& p);
+    bool operator!=(const position& p) const;
+    bool operator==(const position& p) const;
 
 private:
     int d_i, d_j;

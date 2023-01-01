@@ -9,8 +9,8 @@ elements::elements(const position &pos) : d_pos{pos}
 
 void elements::changePosition(const position &p)
 {
-  d_pos.modifieI(p.i());
-  d_pos.modifieJ(p.j());
+  d_pos.setI(p.getI());
+  d_pos.setJ(p.getJ());
 }
 
 position elements::posElem() const

@@ -13,27 +13,27 @@ using std::string;
 
 TEST_CASE("0 - Test de la classe position")
 {
-    double x = 6.1, y = 5.8;
-    position Testposition{x, y};
-    position pT {5,2.2};
+    int x = 6, y = 5;
+    position p{x, y};
+    position pT {5,2};
     SUBCASE("Test du constructeur")
     {
-        REQUIRE(p.renvoyerX() == x);
-    	REQUIRE(p.renvoyerY() == y);
+        REQUIRE(p.i() == x);
+    	REQUIRE(p.j() == y);
     }
     SUBCASE("Test du constructeur par defaut")
     {
-        REQUIRE(p.renvoyerX() == 0);
-    	REQUIRE(p.renvoyerY() == 0);
+        REQUIRE(p.i() == 0);
+    	REQUIRE(p.j() == 0);
     }
     SUBCASE("Test de l'operator ==")
     {
-        position p{6.1,5.8};
-        REQUIRE_EQ(p, Testposition);
+        position p{6,5};
+        REQUIRE_EQ(p, p);
     }
     SUBCASE("Test de l'operator !=")
     {
-        REQUIRE_NE(pT, Testposition);
+        REQUIRE_NE(pT, p);
     }
 }
 

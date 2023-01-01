@@ -12,7 +12,7 @@ partie::partie(const terrain &t, std::unique_ptr<interface> inter) : d_t{t}, d_i
 bool partie::positionValide(const position & pos)
 {
 
-    if(pos.i() > d_t.hauteur() || pos.j() > d_t.largeur())
+    if(pos.getI() > d_t.hauteur() || pos.getJ() > d_t.largeur())
     {
        return false;
     }
@@ -27,7 +27,7 @@ void partie::ajoutePiege(const position& pos)
 {
     if(positionValide(pos))
     {
-        auto obj = d_t.tabElements()[pos.i()][pos.j()].get();
+        auto obj = d_t.tabElements()[pos.getI()][pos.getJ()].get();
         if(obj!=nullptr)
         {
             if(!dynamic_cast<pieges*>(obj))
@@ -52,7 +52,7 @@ void partie::ajouteLion(const position& pos)
 {
     if(positionValide(pos))
     {
-        auto obj = d_t.tabElements()[pos.i()][pos.j()].get();
+        auto obj = d_t.tabElements()[pos.getI()][pos.getJ()].get();
         if(obj!=nullptr)
         {
             if(!dynamic_cast<lion*>(obj))
@@ -76,7 +76,7 @@ void partie::ajouteTigre(const position& pos)
 {
     if(positionValide(pos))
     {
-        auto obj = d_t.tabElements()[pos.i()][pos.j()].get();
+        auto obj = d_t.tabElements()[pos.getI()][pos.getJ()].get();
         if(obj!=nullptr)
         {
             if(!dynamic_cast<tigre*>(obj))
@@ -141,7 +141,7 @@ void partie::joue()
            {
 
                        position posJoueur = d_t.posJoueur();
-                       auto elem = d_t.tabElements()[posJoueur.i()][posJoueur.j()].get();
+                       auto elem = d_t.tabElements()[posJoueur.getI()][posJoueur.getJ()].get();
 
 
                        std::cout<<std::endl<<"Choisir une direction de deplacement"<<std::endl;
@@ -154,10 +154,10 @@ void partie::joue()
                            std::cout<<"on a "<<joueurMort<<" "<<d_t.nombreFauves()<<std::endl;
                            std::cin>>direction;
 
-                               j = dynamic_cast<joueurNormal*>(d_t.tabElements()[posJoueur.i()][posJoueur.j()].get());
+                               j = dynamic_cast<joueurNormal*>(d_t.tabElements()[posJoueur.getI()][posJoueur.getJ()].get());
                                j->deplace(d_t,direction);
 
-                               if(d_t.posJoueur().i()==-1 && d_t.posJoueur().j()==-1)
+                               if(d_t.posJoueur().getI()==-1 && d_t.posJoueur().getJ()==-1)
                                {
                                   joueurMort =  true;
                                }
@@ -177,16 +177,16 @@ void partie::joue()
                                    positionFauves = d_t.tabPositionFauves();
                                    position posFauves = positionFauves[j];
 
-                                   auto elem = d_t.tabElements()[posFauves.i()][posFauves.j()].get();
+                                   auto elem = d_t.tabElements()[posFauves.getI()][posFauves.getJ()].get();
 
                                    if(dynamic_cast<tigre*>(elem))
                                    {
-                                      tigre* t = dynamic_cast<tigre*>(d_t.tabElements()[posFauves.i()][posFauves.j()].get());
+                                      tigre* t = dynamic_cast<tigre*>(d_t.tabElements()[posFauves.getI()][posFauves.getJ()].get());
                                       t->deplace(d_t,direction);
                                    }
                                    else if(dynamic_cast<lion*>(elem))
                                    {
-                                      lion* l = dynamic_cast<lion*>(d_t.tabElements()[posFauves.i()][posFauves.j()].get());
+                                      lion* l = dynamic_cast<lion*>(d_t.tabElements()[posFauves.getI()][posFauves.getJ()].get());
                                       l->deplace(d_t,direction);
                                    }
 
@@ -197,7 +197,7 @@ void partie::joue()
                                        j++;
                                    }
 
-                                   if(d_t.posJoueur().i()==-1 && d_t.posJoueur().j()==-1)
+                                   if(d_t.posJoueur().getI()==-1 && d_t.posJoueur().getJ()==-1)
                                    {
                                       joueurMort =  true;
                                    }

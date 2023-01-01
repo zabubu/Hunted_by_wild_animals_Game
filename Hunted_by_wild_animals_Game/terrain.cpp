@@ -102,14 +102,14 @@ const std::vector<position>& terrain::tabPositionFauves() const
 
 void terrain::ajouterElement(std::unique_ptr<elements> elem, const position &pos)
 {
-      if(d_tabElements[pos.i()][pos.j()].get()==nullptr)
+      if(d_tabElements[pos.getI()][pos.getJ()].get()==nullptr)
         {
             if(dynamic_cast<fauves*>(elem.get()))
             {
                 d_tabPosFauves.push_back(pos);
                 d_nbFauves++;
             }
-            d_tabElements[pos.i()][pos.j()] = std::move(elem);
+            d_tabElements[pos.getI()][pos.getJ()] = std::move(elem);
         }
     }
 
@@ -132,7 +132,7 @@ void terrain::supprimerCaseTabPositionFauves(const position &pos)
 void terrain::supprimerElement(const position &pos)
 {
 
-        auto obj = d_tabElements[pos.i()][pos.j()].get();
+        auto obj = d_tabElements[pos.getI()][pos.getJ()].get();
         if(obj!=nullptr)
         {
             if(dynamic_cast<fauves*>(obj))
@@ -140,7 +140,7 @@ void terrain::supprimerElement(const position &pos)
               supprimerCaseTabPositionFauves(pos);
               d_nbFauves--;
             }
-            d_tabElements[pos.i()][pos.j()].reset();
+            d_tabElements[pos.getI()][pos.getJ()].reset();
         }
 }
 
@@ -376,7 +376,7 @@ void terrain::creeTerrain()
  {
      int type;
 
-     auto elem = d_tabElements[pos.i()][pos.j()].get();
+     auto elem = d_tabElements[pos.getI()][pos.getJ()].get();
 
      if(dynamic_cast<joueurNormal*>(elem))
      {
@@ -421,7 +421,7 @@ bool terrain::joueurEnVie()
     position positionJoueur = posJoueur();
 
     bool enVie;
-    if(positionJoueur.i()==-1 && positionJoueur.j()==-1)
+    if(positionJoueur.getI()==-1 && positionJoueur.getJ()==-1)
     {
         enVie = false;
     }

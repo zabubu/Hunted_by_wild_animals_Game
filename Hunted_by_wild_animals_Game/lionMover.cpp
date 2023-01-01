@@ -10,26 +10,26 @@ position lionMover::nouvellePositionPotentiel()
 {
     if(direction()==8)
     {
-        return position{positionElem().i()-1, positionElem().j()};
+        return position{positionElem().getI()-1, positionElem().getJ()};
     }
     else if(direction()==2)
     {
-       return position{positionElem().i()+1, positionElem().j()};
+       return position{positionElem().getI()+1, positionElem().getJ()};
     }
     else if(direction()==6)
     {
-       return position{positionElem().i(), positionElem().j()+1};
+       return position{positionElem().getI(), positionElem().getJ()+1};
     }
     else if(direction()==4)
     {
-       return position{positionElem().i(), positionElem().j()-1};
+       return position{positionElem().getI(), positionElem().getJ()-1};
     }
 }
 
 std::vector<int> lionMover::tabDirectionsDeplacements(const position &posJoueur, const position &posTigre)
 {
        std::vector<int> tabDeplacements;
-     int Ijoueur = posJoueur.i(), Jjoueur = posJoueur.j(), Ilion = posTigre.i(), Jlion = posTigre.j();
+     int Ijoueur = posJoueur.getI(), Jjoueur = posJoueur.getJ(), Ilion = posTigre.getI(), Jlion = posTigre.getJ();
 
      if(Jlion > Jjoueur)
      {
@@ -155,7 +155,7 @@ void lionMover::deplace(terrain &t)
 
                  if(situation(t)==SITUATION_PEUT_SE_DEPLACER)
                  {
-                     int iAct=posActuelle.i(), jAct = posActuelle.j(), iNouv = nouvellePos.i(), jNouv = nouvellePos.j();
+                     int iAct=posActuelle.getI(), jAct = posActuelle.getJ(), iNouv = nouvellePos.getI(), jNouv = nouvellePos.getJ();
                      t.changeCase(iAct,jAct,iNouv,jNouv);
                  }
                  else if(situation(t)==SITUATION_MORT)
@@ -165,7 +165,7 @@ void lionMover::deplace(terrain &t)
                  else if(situation(t)==SITUATION_MANGE)
                  {
                     t.supprimerElement(nouvellePos);
-                    int iAct=posActuelle.i(), jAct = posActuelle.j(), iNouv = nouvellePos.i(), jNouv = nouvellePos.j();
+                    int iAct=posActuelle.getI(), jAct = posActuelle.getJ(), iNouv = nouvellePos.getI(), jNouv = nouvellePos.getJ();
                     t.changeCase(iAct,jAct,iNouv,jNouv);
                  }
 }

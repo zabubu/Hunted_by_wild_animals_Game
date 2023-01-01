@@ -41,7 +41,7 @@ void interfaceWinbgi::afficheTerrain(const terrain& ter) const
                 position un{x-5,y-5};
                 position quatre{x+5,y+5};
                 setcolor(WHITE);
-                bar(un.i()+50,un.j()+50,quatre.i()+50,quatre.j()+50);
+                bar(un.getI()+50,un.getJ()+50,quatre.getI()+50,quatre.getJ()+50);
             }
         }
     }
@@ -51,61 +51,60 @@ void interfaceWinbgi::afficheTigre(const tigre &t) const
 {
     int caseWidth = 30; // Largeur d'une case en pixels
     int caseHeight = 30; // Hauteur d'une case en pixels
-    int y=t.posElem().i()*caseWidth;
-    int x=t.posElem().j()*caseHeight;
+    int y=t.posElem().getI()*caseWidth;
+    int x=t.posElem().getJ()*caseHeight;
     position un{x-5,y-5};
     position quatre{x+5,y+5};
     setcolor(RED);
-    bar(un.i()+50,un.j()+50,quatre.i()+50,quatre.j()+50);
+    bar(un.getI()+50,un.getJ()+50,quatre.getI()+50,quatre.getJ()+50);
 }
 
 void interfaceWinbgi::afficheLion(const lion &l) const
 {
     int caseWidth = 30; // Largeur d'une case en pixels
     int caseHeight = 30; // Hauteur d'une case en pixels
-    int y=l.posElem().i()*caseWidth;
-    int x=l.posElem().j()*caseHeight;
+    int y=l.posElem().getI()*caseWidth;
+    int x=l.posElem().getJ()*caseHeight;
     position un{x-5,y-5};
     position quatre{x+5,y+5};
     setcolor(YELLOW);
-    bar(un.i()+50,un.j()+50,quatre.i()+50,quatre.j()+50);
+    bar(un.getI()+50,un.getJ()+50,quatre.getI()+50,quatre.getJ()+50);
 }
 
 void interfaceWinbgi::affichePieges(const pieges &p) const
 {
     int caseWidth = 30; // Largeur d'une case en pixels
     int caseHeight = 30; // Hauteur d'une case en pixels
-    int y=p.posElem().i()*caseWidth;
-    int x=p.posElem().j()*caseHeight;
+    int y=p.posElem().getI()*caseWidth;
+    int x=p.posElem().getJ()*caseHeight;
     position un{x-5,y-5};
     position quatre{x+5,y+5};
     setcolor(BLUE);
-    bar(un.i()+50,un.j()+50,quatre.i()+50,quatre.j()+50);
+    bar(un.getI()+50,un.getJ()+50,quatre.getI()+50,quatre.getJ()+50);
 }
 
 void interfaceWinbgi::afficheArbres(const arbres& a) const
 {
     int caseWidth = 30; // Largeur d'une case en pixels
     int caseHeight = 30; // Hauteur d'une case en pixels
-    int y=a.posElem().i()*caseWidth;
-    int x=a.posElem().j()*caseHeight;
+    int y=a.posElem().getI()*caseWidth;
+    int x=a.posElem().getJ()*caseHeight;
     position un{x-5,y-5};
     position quatre{x+5,y+5};
     setcolor(GREEN);
-    bar(un.i()+50,un.j()+50,quatre.i()+50,quatre.j()+50);
+    bar(un.getI()+50,un.getJ()+50,quatre.getI()+50,quatre.getJ()+50);
 }
-
 void interfaceWinbgi::afficheJoueurExpert(const joueurExpert& a) const
 {
     int caseWidth = 30; // Largeur d'une case en pixels
     int caseHeight = 30; // Hauteur d'une case en pixels
-    int y=a.posElem().i()*caseWidth;
-    int x=a.posElem().j()*caseHeight;
+    int y=a.posElem().getI()*caseWidth;
+    int x=a.posElem().getJ()*caseHeight;
      //readimagefile("C++.jpg",0,0,x,y)
     position un{x-5,y-5};
     position quatre{x+5,y+5};
     setcolor(CYAN);
-    bar(un.i()+50,un.j()+50,quatre.i()+50,quatre.j()+50);
+    bar(un.getI()+50,un.getJ()+50,quatre.getI()+50,quatre.getJ()+50);
 
 }
 
@@ -113,13 +112,13 @@ void interfaceWinbgi::afficheJoueurNormal(const joueurNormal& a) const
 {
     int caseWidth = 30; // Largeur d'une case en pixels
     int caseHeight = 30; // Hauteur d'une case en pixels
-    int y=a.posElem().i()*caseWidth;
-    int x=a.posElem().j()*caseHeight;
+    int y=a.posElem().getI()*caseWidth;
+    int x=a.posElem().getJ()*caseHeight;
      //readimagefile("C++.jpg",0,0,x,y)
     position un{x-5,y-5};
     position quatre{x+5,y+5};
     setcolor(CYAN);
-    bar(un.i()+50,un.j()+50,quatre.i()+50,quatre.j()+50);
+    bar(un.getI()+50,un.getJ()+50,quatre.getI()+50,quatre.getJ()+50);
 }
 
 void interfaceWinbgi::initialize()

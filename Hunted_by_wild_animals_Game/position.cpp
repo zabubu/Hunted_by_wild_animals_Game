@@ -10,27 +10,27 @@ position::position(int i, int j) : d_i{i}, d_j{j}
 }
 
 
-position::position(const position &p) : d_i{p.i()}, d_j{p.j()}
+position::position(const position &p) : d_i{p.getI()}, d_j{p.getJ()}
 {
 
 }
 
-int position::i() const
+int position::getI() const
 {
     return d_i;
 }
 
-int position::j() const
+int position::getJ() const
 {
     return d_j;
 }
 
-void position::modifieI(int i)
+void position::setI(int i)
 {
     d_i=i;
 }
 
-void position::modifieJ(int j)
+void position::setJ(int j)
 {
     d_j = j;
 }
@@ -44,20 +44,20 @@ position& position::operator=(const position& p)
 {
     if(this != &p)
     {
-        d_i = p.i();
-        d_j = p.j();
+        d_i = p.getI();
+        d_j = p.getJ();
     }
     return *this;
 }
 
 bool position::operator!=(const position& p) const
 {
-    return (d_i != p.i()) || (d_j != p.j());
+    return (d_i != p.getI()) || (d_j != p.getJ());
 }
 
 bool position::operator==(const position& p) const
 {
-    return (d_i == p.i()) && (d_j == p.j());
+    return (d_i == p.getI()) && (d_j == p.getJ());
 }
 
 
