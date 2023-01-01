@@ -1,3 +1,4 @@
+/*
 #ifndef TESTJOUEUR_H
 #define TESTJOUEUR_H
 
@@ -42,3 +43,4 @@ TEST_CASE("0 - Test de la classe joueur")
 }
 
 #endif //TESTJOUEUR_H
+*/

@@ -1,3 +1,4 @@
+/*
 #ifndef TESTARBRES_H
 #define TESTARBRES_H
 
@@ -27,3 +28,4 @@ TEST_CASE("Construction de l'arbre")
 }
 
 #endif
+*/

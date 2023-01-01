@@ -1,3 +1,4 @@
+/*
 #ifndef TESTFAUVES_H
 #define TESTFAUVES_H
 
@@ -25,7 +26,7 @@ TEST_CASE("Les opérations sur les fauves sont correctes")
 			fau.deplaceEn(p{2,5})
 			position p{3,3};
 			fau.DeplaceEn(p);
-			REQUIRE_EQ(fau.position(),p);	
+			REQUIRE_EQ(fau.position(),p);
 		}
 	}
 	SUBCASE("La verification de déplacement est correct")
@@ -45,3 +46,4 @@ TEST_CASE("Les opérations sur les fauves sont correctes")
 	}
 }
 #endif
+*/

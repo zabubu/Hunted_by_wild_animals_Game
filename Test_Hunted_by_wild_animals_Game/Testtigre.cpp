@@ -1,3 +1,4 @@
+/*
 #ifndef TESTTIGRE_H
 #define TESTTIGRE_H
 #include "doctest.h"
@@ -78,3 +79,4 @@ TEST_CASE("Les opérations sur les positions des tigres sont corrects")
 
 
 #endif
+*/

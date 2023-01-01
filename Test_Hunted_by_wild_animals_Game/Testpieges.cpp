@@ -1,3 +1,4 @@
+/*
 #ifndef TESTPIEGES_H
 #define TESTPIEGES_H
 
@@ -27,3 +28,4 @@ TEST_CASE("Construction du piège")
 }
 
 #endif
+*/

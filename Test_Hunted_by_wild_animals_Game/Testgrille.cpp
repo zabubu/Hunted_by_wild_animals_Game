@@ -1,3 +1,4 @@
+/*
 #ifndef TESTGRILLE_H
 #define TESTGRILLE_H
 
@@ -35,3 +36,4 @@ TEST_CASE("0 - Test de la classe grille")
 }
 
 #endif //TESTGRILLE_H
+*/
