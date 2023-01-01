@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="arbres.cpp" />
 		<Unit filename="arbres.h" />
+		<Unit filename="conserver.h" />
 		<Unit filename="elementMover.cpp" />
 		<Unit filename="elementMover.h" />
 		<Unit filename="elements.cpp" />
@@ -42,6 +43,7 @@
 		<Unit filename="elementsDeplacable.h" />
 		<Unit filename="fauves.cpp" />
 		<Unit filename="fauves.h" />
+		<Unit filename="graphics.h" />
 		<Unit filename="grille.cpp" />
 		<Unit filename="grille.h" />
 		<Unit filename="interface.h" />
@@ -76,6 +78,7 @@
 		<Unit filename="tigre.h" />
 		<Unit filename="tigreMover.cpp" />
 		<Unit filename="tigreMover.h" />
+		<Unit filename="winbgi.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

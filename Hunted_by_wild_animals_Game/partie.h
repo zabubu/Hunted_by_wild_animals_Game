@@ -8,7 +8,6 @@
 #include "lion.h"
 #include "tigre.h"
 #include "interface.h"
-#include "interfaceWinbgi.h"
 #include "interfaceT.h"
 #include "joueurNormal.h"
 #include "joueurExpert.h"
