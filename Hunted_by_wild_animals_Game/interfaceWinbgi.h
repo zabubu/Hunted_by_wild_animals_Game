@@ -11,12 +11,14 @@
 #include<memory>
 #include <iostream>
 
+using namespace std;
 
 class interfaceWinbgi : public interface
 {
     public :
 
-         interfaceWinbgi();
+    interfaceWinbgi();
+
 
     void afficheTerrain(const terrain& ter) const override;
     void afficheTigre(const tigre &t) const override;
