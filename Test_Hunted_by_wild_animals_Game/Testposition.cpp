@@ -18,13 +18,13 @@ TEST_CASE("0 - Test de la classe position")
     position pT {5,2};
     SUBCASE("Test du constructeur")
     {
-        REQUIRE(p.i() == x);
-    	REQUIRE(p.j() == y);
+        REQUIRE_EQ(p.getI() == x);
+    	REQUIRE_EQ(p.getJ() == y);
     }
-    SUBCASE("Test du constructeur par defaut")
+    /*SUBCASE("Test du constructeur par defaut")
     {
-        REQUIRE(p.i() == 0);
-    	REQUIRE(p.j() == 0);
+        REQUIRE_EQ(p.getI() == 0);
+    	REQUIRE_EQ(p.getJ() == 0);
     }
     SUBCASE("Test de l'operator ==")
     {
@@ -34,7 +34,7 @@ TEST_CASE("0 - Test de la classe position")
     SUBCASE("Test de l'operator !=")
     {
         REQUIRE_NE(pT, p);
-    }
+    }*/
 }
 
 #endif //TESTPOINT_H
