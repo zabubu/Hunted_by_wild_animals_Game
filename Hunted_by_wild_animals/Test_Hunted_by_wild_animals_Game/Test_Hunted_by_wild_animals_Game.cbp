@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Test_Hunted_by_wild_animals_Game" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Test_Hunted_by_wild_animals_Game" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Test_Hunted_by_wild_animals_Game" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../Hunted_by_wild_animals_Game/arbres.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/arbres.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/conserver.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/elementMover.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/elementMover.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/elements.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/elements.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/elementsDeplacable.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/elementsDeplacable.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/fauves.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/fauves.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/graphics.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/grille.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/grille.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/interface.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/interfaceT.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/interfaceT.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/interfaceWinbgi.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/interfaceWinbgi.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/joueur.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/joueur.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/joueurExpert.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/joueurExpert.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/joueurNormal.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/joueurNormal.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/joueurNormalMover.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/joueurNormalMover.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/lion.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/lion.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/lionMover.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/lionMover.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/menu.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/menu.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/partie.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/partie.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/pieges.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/pieges.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/position.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/position.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/terrain.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/terrain.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/tigre.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/tigre.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/tigreMover.cpp" />
+		<Unit filename="../Hunted_by_wild_animals_Game/tigreMover.h" />
+		<Unit filename="../Hunted_by_wild_animals_Game/winbgi.cpp" />
+		<Unit filename="doctest.h" />
+		<Unit filename="testPosition.cpp" />
+		<Unit filename="testmain.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
