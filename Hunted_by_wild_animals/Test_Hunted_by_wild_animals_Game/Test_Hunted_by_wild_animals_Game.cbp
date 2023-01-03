@@ -80,6 +80,7 @@
 		<Unit filename="../Hunted_by_wild_animals_Game/winbgi.cpp" />
 		<Unit filename="doctest.h" />
 		<Unit filename="testPosition.cpp" />
+		<Unit filename="testTerrain.cpp" />
 		<Unit filename="testmain.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
