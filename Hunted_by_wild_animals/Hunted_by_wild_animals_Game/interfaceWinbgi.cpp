@@ -8,7 +8,7 @@
 #include "joueurExpert.h"
 #include "position.h"
 
-constexpr int CONSTANT {100};
+constexpr int CONSTANT {110};
 constexpr int caseWidth {30};
 constexpr int caseHeight {30};
 
@@ -69,7 +69,7 @@ void interfaceWinbgi::affichePieges(const pieges &p) const
     int x=p.posElem().getJ()*caseHeight;
     position BAS{x-5,y-5};
     position HAUT{x+5,y+5};
-    setcolor(BLUE);
+    setcolor(DARKGRAY);
     bar(BAS.getI()+CONSTANT,BAS.getJ()+CONSTANT,HAUT.getI()+CONSTANT,HAUT.getJ()+CONSTANT);
 }
 

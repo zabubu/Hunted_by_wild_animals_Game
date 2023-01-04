@@ -446,7 +446,7 @@
 	"position.h"
 	"joueur.h"
 
-1672599194 source:c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\interfacewinbgi.cpp
+1672852099 source:c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\interfacewinbgi.cpp
 	"interfaceWinbgi.h"
 	"terrain.h"
 	"tigre.h"
@@ -524,7 +524,7 @@
 	"lionMover.h"
 	"terrain.h"
 
-1672599195 source:c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\menu.cpp
+1672850213 source:c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\menu.cpp
 	"menu.h"
 	"interfaceT.h"
 	"interfaceWinbgi.h"
@@ -672,4 +672,16 @@
 
 1672599196 source:c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testmain.cpp
 	"doctest.h"
+
+1672852740 source:c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testlion.cpp
+	"doctest.h"
+	<sstream>
+	<string>
+	"../Hunted_by_wild_animals_Game/lion.h"
+
+1672853082 source:c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testarbres.cpp
+	"doctest.h"
+	<sstream>
+	<string>
+	"../Hunted_by_wild_animals_Game/arbres.h"
 
