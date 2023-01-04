@@ -1,7 +1,7 @@
 #include "fauves.h"
 #include "position.h"
 
-fauves::fauves(const position & pos) : elementsDeplacable{pos}
+fauves::fauves(const position & pos) : elements{pos}
 {
 
 }

@@ -3,12 +3,12 @@
 
 #include <iostream>
 #include "position.h"
-#include "elementsDeplacable.h"
+#include "elements.h"
 class interface;
 
 
 
-class joueur : public elementsDeplacable
+class joueur : public elements
 {
     public :
     joueur(const position & pos);

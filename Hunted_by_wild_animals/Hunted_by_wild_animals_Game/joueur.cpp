@@ -1,6 +1,6 @@
 #include "joueur.h"
 
-joueur::joueur(const position & pos) : elementsDeplacable{pos}
+joueur::joueur(const position & pos) : elements{pos}
 {
 
 }

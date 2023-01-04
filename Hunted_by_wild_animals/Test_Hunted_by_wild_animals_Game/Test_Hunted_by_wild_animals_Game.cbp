@@ -34,13 +34,10 @@
 		</Compiler>
 		<Unit filename="../Hunted_by_wild_animals_Game/arbres.cpp" />
 		<Unit filename="../Hunted_by_wild_animals_Game/arbres.h" />
-		<Unit filename="../Hunted_by_wild_animals_Game/conserver.h" />
 		<Unit filename="../Hunted_by_wild_animals_Game/elementMover.cpp" />
 		<Unit filename="../Hunted_by_wild_animals_Game/elementMover.h" />
 		<Unit filename="../Hunted_by_wild_animals_Game/elements.cpp" />
 		<Unit filename="../Hunted_by_wild_animals_Game/elements.h" />
-		<Unit filename="../Hunted_by_wild_animals_Game/elementsDeplacable.cpp" />
-		<Unit filename="../Hunted_by_wild_animals_Game/elementsDeplacable.h" />
 		<Unit filename="../Hunted_by_wild_animals_Game/fauves.cpp" />
 		<Unit filename="../Hunted_by_wild_animals_Game/fauves.h" />
 		<Unit filename="../Hunted_by_wild_animals_Game/graphics.h" />

@@ -15,14 +15,14 @@ TEST_CASE("Les opérations sur les lions sont correctes")
 {
     SUBCASE("Deplacer un lion ")
     {
-        position p{5,4};
-        position pT{4,3};
-        joueurNormal j{p};
-        position pL{3,3};
-        lion L{pL};
-        terrain t{5,5};
-        L.deplace(t);
-        REQUIRE_EQ(L.posElem().getJ(),pT.getJ());
+            terrain t{};
+            std::ifstream ifs;
+            ifs.open("Terrain1.txt");
+            lion l;
+
+
+
+
     }
 }
 

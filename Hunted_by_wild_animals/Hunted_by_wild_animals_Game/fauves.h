@@ -1,7 +1,7 @@
 #ifndef FAUVES_H
 #define FAUVES_H
 
-#include "elementsDeplacable.h"
+#include "elements.h"
 #include <string>
 #include <iostream>
 #include <vector>
@@ -12,7 +12,7 @@ class elements;
 class interface;
 
 
-class fauves : public elementsDeplacable
+class fauves : public elements
 {
 public :
     fauves(const position & pos);
