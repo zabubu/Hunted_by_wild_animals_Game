@@ -30,7 +30,7 @@ void menu::choixInterface()
     {
         std::cout<<"======================== INTERFACE ========================"<<std::endl;
         std::cout<<"1 - Terminal"<<std::endl;
-        std::cout<<"2 - Winbgi (PAS ENCORE FINI)"<<std::endl;
+        std::cout<<"2 - Winbgi "<<std::endl;
         std::cin>>choix;
 
         if(choix == 1)
