@@ -100,7 +100,7 @@ void partie::lireFichier(const std::string& nomFichier)
 {
     if(nomFichier == "")
     {
-        std::cout<<"PAS BON";
+        std::cout<<"ERROR: MAUVAIS FICHIER";
     }
 
     else
@@ -110,7 +110,7 @@ void partie::lireFichier(const std::string& nomFichier)
 
          if(!ifs.is_open())
          {
-            std::cout<<"PAS BON";
+            std::cout<<"ERROR: MAUVAIS FICHIER";
          }
          else
          {
@@ -151,7 +151,6 @@ void partie::joue()
                            std::cout<<"789"<<std::endl;
                            std::cout<<"4 6"<<std::endl;
                            std::cout<<"123"<<std::endl;
-                           std::cout<<"on a "<<joueurMort<<" "<<d_t.nombreFauves()<<std::endl;
                            std::cin>>direction;
 
                                j = dynamic_cast<joueurNormal*>(d_t.tabElements()[posJoueur.getI()][posJoueur.getJ()].get());
@@ -163,9 +162,6 @@ void partie::joue()
                                }
                                affiche();
                        }
-
-
-
                            if( joueurMort ==  false)
                            {
                                 std::vector<position> positionFauves = d_t.tabPositionFauves();
@@ -207,8 +203,6 @@ void partie::joue()
                                    }
                                }
                            }
-
-
 
            }
 

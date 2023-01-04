@@ -8,9 +8,8 @@
 #include "joueurExpert.h"
 #include "position.h"
 
-constexpr int CONSTANT {110};
-constexpr int caseWidth {30};
-constexpr int caseHeight {30};
+constexpr int CONSTANT {110};//constante permettant un affichage centrale du jeu
+constexpr int SIZE {30};// taille d'un rectangle du terrain
 
 interfaceWinbgi::interfaceWinbgi():width{500},
                                     height{500}
@@ -32,8 +31,8 @@ void interfaceWinbgi::afficheTerrain(const terrain& ter) const
             }
             else
             {
-                int x = j * caseWidth; // Coordonnées x du pixel à dessiner
-                int y = i * caseHeight; // Coordonnées y du pixel à dessiner
+                int x = j * SIZE; // Coordonnées x du pixel à dessiner
+                int y = i * SIZE; // Coordonnées y du pixel à dessiner
                 position BAS{x-5,y-5};
                 position HAUT{x+5,y+5};
                 setcolor(WHITE);
@@ -45,8 +44,8 @@ void interfaceWinbgi::afficheTerrain(const terrain& ter) const
 
 void interfaceWinbgi::afficheTigre(const tigre &t) const
 {
-    int y=t.posElem().getI()*caseWidth;
-    int x=t.posElem().getJ()*caseHeight;
+    int y=t.posElem().getI()*SIZE;
+    int x=t.posElem().getJ()*SIZE;
     position BAS{x-5,y-5};
     position HAUT{x+5,y+5};
     setcolor(RED);
@@ -55,8 +54,8 @@ void interfaceWinbgi::afficheTigre(const tigre &t) const
 
 void interfaceWinbgi::afficheLion(const lion &l) const
 {
-    int y=l.posElem().getI()*caseWidth;
-    int x=l.posElem().getJ()*caseHeight;
+    int y=l.posElem().getI()*SIZE;
+    int x=l.posElem().getJ()*SIZE;
     position BAS{x-5,y-5};
     position HAUT{x+5,y+5};
     setcolor(YELLOW);
@@ -65,8 +64,8 @@ void interfaceWinbgi::afficheLion(const lion &l) const
 
 void interfaceWinbgi::affichePieges(const pieges &p) const
 {
-    int y=p.posElem().getI()*caseWidth;
-    int x=p.posElem().getJ()*caseHeight;
+    int y=p.posElem().getI()*SIZE;
+    int x=p.posElem().getJ()*SIZE;
     position BAS{x-5,y-5};
     position HAUT{x+5,y+5};
     setcolor(DARKGRAY);
@@ -75,8 +74,8 @@ void interfaceWinbgi::affichePieges(const pieges &p) const
 
 void interfaceWinbgi::afficheArbres(const arbres& a) const
 {
-    int y=a.posElem().getI()*caseWidth;
-    int x=a.posElem().getJ()*caseHeight;
+    int y=a.posElem().getI()*SIZE;
+    int x=a.posElem().getJ()*SIZE;
     position BAS{x-5,y-5};
     position HAUT{x+5,y+5};
     setcolor(GREEN);
@@ -84,8 +83,8 @@ void interfaceWinbgi::afficheArbres(const arbres& a) const
 }
 void interfaceWinbgi::afficheJoueurExpert(const joueurExpert& a) const
 {
-    int y=a.posElem().getI()*caseWidth;
-    int x=a.posElem().getJ()*caseHeight;
+    int y=a.posElem().getI()*SIZE;
+    int x=a.posElem().getJ()*SIZE;
     position BAS{x-5,y-5};
     position HAUT{x+5,y+5};
     setcolor(CYAN);
@@ -95,8 +94,8 @@ void interfaceWinbgi::afficheJoueurExpert(const joueurExpert& a) const
 
 void interfaceWinbgi::afficheJoueurNormal(const joueurNormal& a) const
 {
-    int y=a.posElem().getI()*caseWidth;
-    int x=a.posElem().getJ()*caseHeight;
+    int y=a.posElem().getI()*SIZE;
+    int x=a.posElem().getJ()*SIZE;
     position BAS{x-5,y-5};
     position HAUT{x+5,y+5};
     setcolor(CYAN);
