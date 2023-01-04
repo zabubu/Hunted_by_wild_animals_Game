@@ -25,7 +25,7 @@ void joueurExpert::affiche(const interface &inter) const
     inter.afficheJoueurExpert(*this);
 }
 
-void joueurExpert::deplace(terrain &t , int direction)
+void joueurExpert::deplaceJoueur(terrain &t , int direction)
  {
      position positionActuelle = posElem();
      joueurNormalMover moveJoueurN{direction, positionActuelle};

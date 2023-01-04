@@ -24,10 +24,10 @@ void lion::affiche(const interface &inter) const
     inter.afficheLion(*this);
 }
 
-void lion::deplace(terrain &t , int direction)
+void lion::deplace(terrain &t )
  {
      position positionActuelle = posElem();
-     lionMover moveLion{direction, positionActuelle};
+     lionMover moveLion{positionActuelle};
      position p  =  moveLion.nouvellePosition(t);
      moveLion.deplace(t);
      changePosition(p);

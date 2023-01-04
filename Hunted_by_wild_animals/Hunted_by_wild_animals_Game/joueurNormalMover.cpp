@@ -3,7 +3,7 @@
 #include "terrain.h"
 
 
-joueurNormalMover::joueurNormalMover(int direction ,const position &posElement) : elementMover{direction, posElement}
+joueurNormalMover::joueurNormalMover(int direction ,const position &posElement) : elementMover{posElement,direction}
 {
 
 }

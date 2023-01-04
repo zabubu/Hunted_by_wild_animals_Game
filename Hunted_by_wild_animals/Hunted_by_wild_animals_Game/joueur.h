@@ -14,7 +14,7 @@ class joueur : public elementsDeplacable
     joueur(const position & pos);
     std::unique_ptr<elements> clone() override =0;
     void affiche(const interface &inter) const override =0;
-    void deplace(terrain &t , int direction) override =0;
+    virtual void deplaceJoueur(terrain &t , int direction) =0;
 
 };
 

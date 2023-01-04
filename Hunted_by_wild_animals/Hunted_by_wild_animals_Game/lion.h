@@ -16,7 +16,7 @@ public:
     lion(const position & pos);
     std::unique_ptr<elements> clone() override;
     void affiche(const interface &inter) const override;
-    void deplace(terrain &t , int direction)override;
+    void deplace(terrain &t )override;
 
 };
 

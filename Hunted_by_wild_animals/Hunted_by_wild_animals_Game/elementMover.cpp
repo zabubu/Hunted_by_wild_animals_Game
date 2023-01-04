@@ -1,7 +1,7 @@
 #include "elementMover.h"
 #include "terrain.h"
 
-elementMover::elementMover(int direction, const position &posElement) : d_direction{direction}, d_posElement{posElement}
+elementMover::elementMover(const position &posElement,int direction) : d_direction{direction}, d_posElement{posElement}
 {
 
 }

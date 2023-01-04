@@ -44,8 +44,6 @@
 		<Unit filename="../Hunted_by_wild_animals_Game/fauves.cpp" />
 		<Unit filename="../Hunted_by_wild_animals_Game/fauves.h" />
 		<Unit filename="../Hunted_by_wild_animals_Game/graphics.h" />
-		<Unit filename="../Hunted_by_wild_animals_Game/grille.cpp" />
-		<Unit filename="../Hunted_by_wild_animals_Game/grille.h" />
 		<Unit filename="../Hunted_by_wild_animals_Game/interface.h" />
 		<Unit filename="../Hunted_by_wild_animals_Game/interfaceT.cpp" />
 		<Unit filename="../Hunted_by_wild_animals_Game/interfaceT.h" />

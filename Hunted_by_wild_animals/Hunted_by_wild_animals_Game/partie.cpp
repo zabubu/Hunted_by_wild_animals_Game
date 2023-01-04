@@ -154,7 +154,7 @@ void partie::joue()
                            std::cin>>direction;
 
                                j = dynamic_cast<joueurNormal*>(d_t.tabElements()[posJoueur.getI()][posJoueur.getJ()].get());
-                               j->deplace(d_t,direction);
+                               j->deplaceJoueur(d_t,direction);
 
                                if(d_t.posJoueur().getI()==-1 && d_t.posJoueur().getJ()==-1)
                                {
@@ -178,12 +178,12 @@ void partie::joue()
                                    if(dynamic_cast<tigre*>(elem))
                                    {
                                       tigre* t = dynamic_cast<tigre*>(d_t.tabElements()[posFauves.getI()][posFauves.getJ()].get());
-                                      t->deplace(d_t,direction);
+                                      t->deplace(d_t);
                                    }
                                    else if(dynamic_cast<lion*>(elem))
                                    {
                                       lion* l = dynamic_cast<lion*>(d_t.tabElements()[posFauves.getI()][posFauves.getJ()].get());
-                                      l->deplace(d_t,direction);
+                                      l->deplace(d_t);
                                    }
 
                                    positionFauves = d_t.tabPositionFauves();

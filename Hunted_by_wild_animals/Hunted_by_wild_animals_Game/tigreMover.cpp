@@ -1,7 +1,7 @@
 #include "tigreMover.h"
 #include "terrain.h"
 
-tigreMover::tigreMover(int direction,const position &posElement) : elementMover{direction, posElement}
+tigreMover::tigreMover(const position &posElement) : elementMover{posElement}
 {
 
 }

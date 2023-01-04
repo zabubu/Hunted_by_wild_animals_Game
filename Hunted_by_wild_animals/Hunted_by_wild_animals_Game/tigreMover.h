@@ -8,7 +8,7 @@ class terrain;
 class tigreMover : public elementMover
 {
 public :
-    tigreMover(int direction, const position &posElement);
+    tigreMover( const position &posElement);
     position nouvellePositionPotentiel() override;
 
     std::vector<int> tabDirectionsDeplacements (const position &posJoueur, const position &posTigre);

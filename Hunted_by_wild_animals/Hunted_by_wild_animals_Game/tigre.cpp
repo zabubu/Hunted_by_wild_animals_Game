@@ -25,10 +25,10 @@ void tigre::affiche(const interface &inter) const
      inter.afficheTigre(*this);
 }
 
-void tigre::deplace(terrain &t , int direction)
+void tigre::deplace(terrain &t )
  {
      position positionActuelle = posElem();
-     tigreMover moveTigre{direction, positionActuelle};
+     tigreMover moveTigre{positionActuelle};
      position p  =  moveTigre.nouvellePosition(t);
      moveTigre.deplace(t);
      changePosition(p);

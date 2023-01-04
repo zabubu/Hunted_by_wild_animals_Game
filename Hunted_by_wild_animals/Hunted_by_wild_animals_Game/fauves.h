@@ -18,7 +18,7 @@ public :
     fauves(const position & pos);
     std::unique_ptr<elements> clone() override =0;
     void affiche(const interface &inter) const override=0;
-    void deplace(terrain &t , int direction) override =0;
+    virtual void deplace(terrain &t ) = 0;
 
 };
 

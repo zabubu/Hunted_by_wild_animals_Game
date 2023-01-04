@@ -1,7 +1,7 @@
 #include "lionMover.h"
 #include "terrain.h"
 
-lionMover::lionMover(int direction,const position &posElement) : elementMover{direction, posElement}
+lionMover::lionMover(const position &posElement) : elementMover{posElement}
 {
 
 }
