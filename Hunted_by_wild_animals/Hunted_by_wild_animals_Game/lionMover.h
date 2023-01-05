@@ -9,10 +9,10 @@ class lionMover : public elementMover
 {
 public :
     lionMover( const position &posElement);
-    position nouvellePositionPotentiel() override;
+    position positionSelonDirection() override;
 
     std::vector<int> tabDirectionsDeplacements (const position &posJoueur, const position &posLion);
-    position nouvellePositionPotentiel2(terrain &t);
+    position nouvellePositionPotentiel(terrain &t);
 
     void deplace(terrain &t) override;
     int situation(terrain &t) override;

@@ -6,7 +6,7 @@ tigreMover::tigreMover(const position &posElement) : elementMover{posElement}
 
 }
 
-position tigreMover::nouvellePositionPotentiel()
+position tigreMover::positionSelonDirection()
 {
     if(direction()==8)
     {
@@ -124,7 +124,7 @@ std::vector<int> tigreMover::tabDirectionsDeplacements(const position &posJoueur
           return tabDeplacements;
 }
 
-position tigreMover::nouvellePositionPotentiel2(terrain &t)
+position tigreMover::nouvellePositionPotentiel(terrain &t)
 {
    position posJoueur = t.posJoueur();
    position posActuelle =  positionElem();
@@ -135,7 +135,7 @@ position tigreMover::nouvellePositionPotentiel2(terrain &t)
    do
    {
        d_direction = tabDirection[i];
-       nouvellePos = nouvellePositionPotentiel();
+       nouvellePos = positionSelonDirection();
        int elementSurCase = t.typeElementCase(nouvellePos);
 
        if(elementSurCase == t.TYPE_TIGRE ||  elementSurCase == t.TYPE_ARBRE)
@@ -155,7 +155,7 @@ position tigreMover::nouvellePositionPotentiel2(terrain &t)
 int tigreMover::situation(terrain &t)
 {
          position posActuelle = positionElem();
-         position nouvellePos = nouvellePositionPotentiel2(t);
+         position nouvellePos = nouvellePositionPotentiel(t);
 
           int elementSurCase = t.typeElementCase(nouvellePos);
 
@@ -183,7 +183,7 @@ int tigreMover::situation(terrain &t)
 void tigreMover::deplace(terrain &t)
 {
          position posActuelle = positionElem();
-          position nouvellePos = nouvellePositionPotentiel2(t);
+          position nouvellePos = nouvellePositionPotentiel(t);
 
                  if(situation(t)==SITUATION_PEUT_SE_DEPLACER)
                  {
@@ -206,7 +206,7 @@ position tigreMover::nouvellePosition(terrain &t)
 {
     if(situation(t)==SITUATION_PEUT_SE_DEPLACER ||  situation(t)==SITUATION_MANGE)
     {
-        return nouvellePositionPotentiel2(t);
+        return nouvellePositionPotentiel(t);
     }
     else
     {

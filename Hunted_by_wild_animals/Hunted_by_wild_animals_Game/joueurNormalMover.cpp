@@ -8,7 +8,7 @@ joueurNormalMover::joueurNormalMover(int direction ,const position &posElement) 
 
 }
 
-position joueurNormalMover::nouvellePositionPotentiel()
+position joueurNormalMover::positionSelonDirection()
 {
     if(direction()==8)
     {
@@ -48,7 +48,7 @@ position joueurNormalMover::nouvellePositionPotentiel()
 int joueurNormalMover::situation(terrain &t)
 {
          position posActuelle = positionElem();
-         position nouvellePos = nouvellePositionPotentiel();
+         position nouvellePos = positionSelonDirection();
 
           int elementSurCase = t.typeElementCase(nouvellePos);
 
@@ -72,7 +72,7 @@ int joueurNormalMover::situation(terrain &t)
 void joueurNormalMover::deplace(terrain &t)
 {
          position posActuelle = positionElem();
-          position nouvellePos = nouvellePositionPotentiel();
+          position nouvellePos = positionSelonDirection();
 
                  if(situation(t)==SITUATION_PEUT_SE_DEPLACER)
                  {
@@ -89,7 +89,7 @@ position joueurNormalMover::nouvellePosition(terrain &t)
 {
     if(situation(t)==SITUATION_PEUT_SE_DEPLACER)
     {
-        return nouvellePositionPotentiel();
+        return positionSelonDirection();
     }
     else
     {

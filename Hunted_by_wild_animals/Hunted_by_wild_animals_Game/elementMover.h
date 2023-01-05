@@ -8,7 +8,7 @@ class elementMover
 public :
     elementMover(const position &posElement,int direction =0);
     virtual ~elementMover() = default;
-    virtual position nouvellePositionPotentiel()=0;
+    virtual position positionSelonDirection()=0;
     virtual void deplace(terrain &t) = 0;
     int direction() const;
     position positionElem() const;

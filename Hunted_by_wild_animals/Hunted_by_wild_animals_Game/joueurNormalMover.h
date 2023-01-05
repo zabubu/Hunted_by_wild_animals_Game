@@ -6,7 +6,7 @@ class joueurNormalMover : public elementMover
 {
     public :
     joueurNormalMover(int direction, const position &posElement);
-    position nouvellePositionPotentiel() override;
+    position positionSelonDirection() override;
     void deplace(terrain &t) override;
     int situation(terrain &t) override;
     position nouvellePosition(terrain &t) override;

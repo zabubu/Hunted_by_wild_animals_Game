@@ -6,7 +6,7 @@ lionMover::lionMover(const position &posElement) : elementMover{posElement}
 
 }
 
-position lionMover::nouvellePositionPotentiel()
+position lionMover::positionSelonDirection()
 {
     if(direction()==8)
     {
@@ -92,7 +92,7 @@ std::vector<int> lionMover::tabDirectionsDeplacements(const position &posJoueur,
           return tabDeplacements;
 }
 
-position lionMover::nouvellePositionPotentiel2(terrain &t)
+position lionMover::nouvellePositionPotentiel(terrain &t)
 {
    position posJoueur = t.posJoueur();
    position posActuelle =  positionElem();
@@ -103,7 +103,7 @@ position lionMover::nouvellePositionPotentiel2(terrain &t)
    do
    {
        d_direction = tabDirection[i];
-       nouvellePos = nouvellePositionPotentiel();
+       nouvellePos = positionSelonDirection();
        int elementSurCase = t.typeElementCase(nouvellePos);
 
        if(elementSurCase == t.TYPE_LION ||  elementSurCase == t.TYPE_ARBRE)
@@ -123,7 +123,7 @@ position lionMover::nouvellePositionPotentiel2(terrain &t)
 int lionMover::situation(terrain &t)
 {
          position posActuelle = positionElem();
-         position nouvellePos = nouvellePositionPotentiel2(t);
+         position nouvellePos = nouvellePositionPotentiel(t);
 
           int elementSurCase = t.typeElementCase(nouvellePos);
 
@@ -151,7 +151,7 @@ int lionMover::situation(terrain &t)
 void lionMover::deplace(terrain &t)
 {
          position posActuelle = positionElem();
-          position nouvellePos = nouvellePositionPotentiel2(t);
+          position nouvellePos = nouvellePositionPotentiel(t);
 
                  if(situation(t)==SITUATION_PEUT_SE_DEPLACER)
                  {
@@ -174,7 +174,7 @@ position lionMover::nouvellePosition(terrain &t)
 {
     if(situation(t)==SITUATION_PEUT_SE_DEPLACER || situation(t)==SITUATION_MANGE)
     {
-        return nouvellePositionPotentiel2(t);
+        return nouvellePositionPotentiel(t);
     }
     else
     {
