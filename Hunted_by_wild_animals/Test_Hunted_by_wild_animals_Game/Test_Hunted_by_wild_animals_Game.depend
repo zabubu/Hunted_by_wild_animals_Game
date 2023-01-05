@@ -344,7 +344,7 @@
 	"../Hunted_by_wild_animals_Game/position.h"
 	<string>
 
-1672585906 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\arbres.cpp
+1672938704 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\arbres.cpp
 	"arbres.h"
 	"interface.h"
 
@@ -565,7 +565,7 @@
 1672936025 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\partie.cpp
 	"partie.h"
 
-1672585906 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\pieges.cpp
+1672938697 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\pieges.cpp
 	"pieges.h"
 	"position.h"
 	"interface.h"
@@ -697,8 +697,26 @@
 	<iostream>
 	<sstream>
 
-1672936210 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testpartie.cpp
+1672936613 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testpartie.cpp
 	"doctest.h"
 	"../Hunted_by_wild_animals_Game/partie.h"
 	"../Hunted_by_wild_animals_Game/terrain.h"
+
+1672936468 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testtigre.cpp
+	"doctest.h"
+	"../Hunted_by_wild_animals_Game/tigre.h"
+	"../Hunted_by_wild_animals_Game/terrain.h"
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+
+1672938802 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testjoueurnormal.cpp
+	"doctest.h"
+	"../Hunted_by_wild_animals_Game/joueurNormal.h"
+	"../Hunted_by_wild_animals_Game/terrain.h"
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
 

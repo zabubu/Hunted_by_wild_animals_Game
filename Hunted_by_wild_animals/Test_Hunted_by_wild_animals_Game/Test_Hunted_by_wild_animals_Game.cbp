@@ -75,6 +75,7 @@
 		<Unit filename="../Hunted_by_wild_animals_Game/winbgi.cpp" />
 		<Unit filename="doctest.h" />
 		<Unit filename="testArbres.cpp" />
+		<Unit filename="testJoueurNormal.cpp" />
 		<Unit filename="testLion.cpp" />
 		<Unit filename="testPartie.cpp" />
 		<Unit filename="testPieges.cpp" />
