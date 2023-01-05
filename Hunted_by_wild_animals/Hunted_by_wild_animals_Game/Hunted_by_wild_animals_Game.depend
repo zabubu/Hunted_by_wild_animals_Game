@@ -98,7 +98,7 @@
 	"position.h"
 	"joueur.h"
 
-1672931747 source:c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\interfacewinbgi.cpp
+1672946838 source:c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\interfacewinbgi.cpp
 	"interfaceWinbgi.h"
 	"terrain.h"
 	"tigre.h"
@@ -209,7 +209,7 @@
 	"fauves.h"
 	"interface.h"
 
-1672946605 c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\partie.h
+1672948707 c:\users\samol\onedrive\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\partie.h
 	"position.h"
 	"terrain.h"
 	"fauves.h"

@@ -1,10 +1,10 @@
 #include "partie.h"
-partie::partie(std::unique_ptr<interface> inter) : d_t{}, d_inter{std::move(inter)}
+partie::partie(std::unique_ptr<interface> inter) : d_terrain{}, d_inter{std::move(inter)}
 {
 
 }
 
-partie::partie(const terrain &t, std::unique_ptr<interface> inter) : d_t{t}, d_inter{std::move(inter)}
+partie::partie(const terrain &t, std::unique_ptr<interface> inter) : d_terrain{t}, d_inter{std::move(inter)}
 {
 
 }
@@ -12,7 +12,7 @@ partie::partie(const terrain &t, std::unique_ptr<interface> inter) : d_t{t}, d_i
 bool partie::positionValide(const position & pos)
 {
 
-    if(pos.getI() > d_t.hauteur() || pos.getJ() > d_t.largeur())
+    if(pos.getI() > d_terrain.hauteur() || pos.getJ() > d_terrain.largeur())
     {
        return false;
     }
@@ -27,18 +27,18 @@ void partie::ajoutePiege(const position& pos)
 {
     if(positionValide(pos))
     {
-        auto obj = d_t.tabElements()[pos.getI()][pos.getJ()].get();
+        auto obj = d_terrain.tabElements()[pos.getI()][pos.getJ()].get();
         if(obj!=nullptr)
         {
             if(!dynamic_cast<pieges*>(obj))
             {
-                d_t.supprimerElement(pos);
-                d_t.ajouterElement(std::make_unique<pieges>(pos), pos);
+                d_terrain.supprimerElement(pos);
+                d_terrain.ajouterElement(std::make_unique<pieges>(pos), pos);
             }
         }
         else
         {
-            d_t.ajouterElement(std::make_unique<pieges>(pos), pos);
+            d_terrain.ajouterElement(std::make_unique<pieges>(pos), pos);
         }
     }
 }
@@ -48,18 +48,18 @@ void partie::ajouteLion(const position& pos)
 {
     if(positionValide(pos))
     {
-        auto obj = d_t.tabElements()[pos.getI()][pos.getJ()].get();
+        auto obj = d_terrain.tabElements()[pos.getI()][pos.getJ()].get();
         if(obj!=nullptr)
         {
             if(!dynamic_cast<lion*>(obj))
             {
-                d_t.supprimerElement(pos);
-                d_t.ajouterElement(std::make_unique<lion>(pos), pos);
+                d_terrain.supprimerElement(pos);
+                d_terrain.ajouterElement(std::make_unique<lion>(pos), pos);
             }
         }
         else
         {
-                d_t.ajouterElement(std::make_unique<lion>(pos),pos);
+                d_terrain.ajouterElement(std::make_unique<lion>(pos),pos);
         }
     }
 
@@ -69,18 +69,18 @@ void partie::ajouteTigre(const position& pos)
 {
     if(positionValide(pos))
     {
-        auto obj = d_t.tabElements()[pos.getI()][pos.getJ()].get();
+        auto obj = d_terrain.tabElements()[pos.getI()][pos.getJ()].get();
         if(obj!=nullptr)
         {
             if(!dynamic_cast<tigre*>(obj))
             {
-                d_t.supprimerElement(pos);
-                d_t.ajouterElement(std::make_unique<tigre>(pos), pos);
+                d_terrain.supprimerElement(pos);
+                d_terrain.ajouterElement(std::make_unique<tigre>(pos), pos);
             }
         }
         else
         {
-                d_t.ajouterElement(std::make_unique<tigre>(pos),pos);
+                d_terrain.ajouterElement(std::make_unique<tigre>(pos),pos);
         }
     }
 }
@@ -96,19 +96,19 @@ void partie::lireFichier(const std::string& nomFichier)
          }
          else
          {
-             d_t.lireDepuisFichier(ifs);
+             d_terrain.lireDepuisFichier(ifs);
          }
 
 }
 
 void partie::nouveauTerrain()
 {
-    d_t.creeTerrain();
+    d_terrain.creeTerrain();
 }
 
 void partie::affiche() const
 {
-    d_inter->afficheTerrain(d_t);
+    d_inter->afficheTerrain(d_terrain);
 }
 
 void partie::joue()
@@ -118,11 +118,11 @@ void partie::joue()
            joueurNormal* j;
 
            affiche();
-           while(joueurMort == false && d_t.nombreFauves()>0)
+           while(joueurMort == false && d_terrain.nombreFauves()>0)
            {
 
-                       position posJoueur = d_t.posJoueur();
-                       auto elem = d_t.tabElements()[posJoueur.getI()][posJoueur.getJ()].get();
+                       position posJoueur = d_terrain.posJoueur();
+                       auto elem = d_terrain.tabElements()[posJoueur.getI()][posJoueur.getJ()].get();
 
 
                        std::cout<<std::endl<<"Choisir une direction de deplacement"<<std::endl;
@@ -134,10 +134,10 @@ void partie::joue()
                            std::cout<<"123"<<std::endl;
                            std::cin>>direction;
 
-                               j = dynamic_cast<joueurNormal*>(d_t.tabElements()[posJoueur.getI()][posJoueur.getJ()].get());
-                               j->deplaceJoueur(d_t,direction);
+                               j = dynamic_cast<joueurNormal*>(d_terrain.tabElements()[posJoueur.getI()][posJoueur.getJ()].get());
+                               j->deplaceJoueur(d_terrain,direction);
 
-                               if(d_t.posJoueur().getI()==-1 && d_t.posJoueur().getJ()==-1)
+                               if(d_terrain.posJoueur().getI()==-1 && d_terrain.posJoueur().getJ()==-1)
                                {
                                   joueurMort =  true;
                                }
@@ -145,36 +145,36 @@ void partie::joue()
                        }
                            if( joueurMort ==  false)
                            {
-                                std::vector<position> positionFauves = d_t.tabPositionFauves();
+                                std::vector<position> positionFauves = d_terrain.tabPositionFauves();
                                int j=0;
 
-                               while(j<positionFauves.size() && d_t.nombreFauves()>0)
+                               while(j<positionFauves.size() && d_terrain.nombreFauves()>0)
                                {
-                                   d_t.miseAjourTabPosFauves();
-                                   positionFauves = d_t.tabPositionFauves();
+                                   d_terrain.miseAjourTabPosFauves();
+                                   positionFauves = d_terrain.tabPositionFauves();
                                    position posFauves = positionFauves[j];
 
-                                   auto elem = d_t.tabElements()[posFauves.getI()][posFauves.getJ()].get();
+                                   auto elem = d_terrain.tabElements()[posFauves.getI()][posFauves.getJ()].get();
 
                                    if(dynamic_cast<tigre*>(elem))
                                    {
-                                      tigre* t = dynamic_cast<tigre*>(d_t.tabElements()[posFauves.getI()][posFauves.getJ()].get());
-                                      t->deplace(d_t);
+                                      tigre* t = dynamic_cast<tigre*>(d_terrain.tabElements()[posFauves.getI()][posFauves.getJ()].get());
+                                      t->deplace(d_terrain);
                                    }
                                    else if(dynamic_cast<lion*>(elem))
                                    {
-                                      lion* l = dynamic_cast<lion*>(d_t.tabElements()[posFauves.getI()][posFauves.getJ()].get());
-                                      l->deplace(d_t);
+                                      lion* l = dynamic_cast<lion*>(d_terrain.tabElements()[posFauves.getI()][posFauves.getJ()].get());
+                                      l->deplace(d_terrain);
                                    }
 
-                                   positionFauves = d_t.tabPositionFauves();
+                                   positionFauves = d_terrain.tabPositionFauves();
 
                                    if(positionFauves[j]==posFauves)
                                    {
                                        j++;
                                    }
 
-                                   if(d_t.posJoueur().getI()==-1 && d_t.posJoueur().getJ()==-1)
+                                   if(d_terrain.posJoueur().getI()==-1 && d_terrain.posJoueur().getJ()==-1)
                                    {
                                       joueurMort =  true;
                                    }

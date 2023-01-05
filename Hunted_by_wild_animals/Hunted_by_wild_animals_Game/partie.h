@@ -46,7 +46,7 @@ public :
     void joue();
     void resultatPartie(bool t) const;
 private :
-    terrain d_t;
+    terrain d_terrain;
     std::unique_ptr<interface> d_inter;
 };
 
