@@ -13,7 +13,7 @@ class terrain;
 class elements
 {
 public :
-   virtual ~elements(){};
+   virtual ~elements()=default;
    elements(const position &pos);
    position posElem() const;
    void changePosition (const position &pos);

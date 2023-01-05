@@ -2,28 +2,19 @@
 #define TESTLION_H
 
 #include "doctest.h"
-#include <sstream>
-#include <string>
 #include "../Hunted_by_wild_animals_Game/lion.h"
-#include "../Hunted_by_wild_animals_Game/terrain.h"
-#include "../Hunted_by_wild_animals_Game/joueur.h"
-#include "../Hunted_by_wild_animals_Game/joueurNormal.h"
 
-using std::ostringstream;
-using std::string;
-TEST_CASE("Les opérations sur les lions sont correctes")
+TEST_CASE("Test de la classe lion")
 {
-    SUBCASE("Deplacer un lion ")
+        int i = 2, j = 4;
+        position posLion{i,j};
+        lion l{posLion};
+    SUBCASE("Test du constructeur")
     {
-            terrain t{};
-            std::ifstream ifs;
-            ifs.open("Terrain1.txt");
-            lion l;
 
-
-
-
+        REQUIRE_EQ(l.posElem(), posLion);
     }
 }
 
 #endif
+

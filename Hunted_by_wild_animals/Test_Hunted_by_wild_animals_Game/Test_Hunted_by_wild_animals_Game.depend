@@ -353,10 +353,10 @@
 	"position.h"
 	"elements.h"
 
-1672597200 c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\position.h
+1672927345 c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\position.h
 	<fstream>
 
-1672585906 c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\elements.h
+1672927277 c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\elements.h
 	<string>
 	<iostream>
 	<memory>
@@ -368,10 +368,10 @@
 	"elementMover.h"
 	"terrain.h"
 
-1672858598 c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\elementmover.h
+1672927345 c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\elementmover.h
 	"position.h"
 
-1672585906 c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\terrain.h
+1672928918 c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\terrain.h
 	<memory>
 	<vector>
 	<fstream>
@@ -521,7 +521,7 @@
 	"lionMover.h"
 	"terrain.h"
 
-1672858598 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\menu.cpp
+1672927624 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\menu.cpp
 	"menu.h"
 	"interfaceT.h"
 	"interfaceWinbgi.h"
@@ -573,7 +573,7 @@
 1672597200 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\position.cpp
 	"position.h"
 
-1672597200 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\terrain.cpp
+1672928918 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\terrain.cpp
 	"terrain.h"
 	<sstream>
 	<string>
@@ -668,7 +668,7 @@
 	<sys/time.h>
 	<unistd.h>
 
-1672858688 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testlion.cpp
+1672924544 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testlion.cpp
 	"doctest.h"
 	<sstream>
 	<string>
@@ -690,4 +690,14 @@
 	"doctest.h"
 	"../Hunted_by_wild_animals_Game/position.h"
 	<string>
+
+1672929842 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testterrain.cpp
+	"doctest.h"
+	"../Hunted_by_wild_animals_Game/terrain.h"
+	"../Hunted_by_wild_animals_Game/position.h"
+	"../Hunted_by_wild_animals_Game/tigre.h"
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
 

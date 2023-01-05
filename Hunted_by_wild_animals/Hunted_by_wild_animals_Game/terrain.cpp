@@ -24,8 +24,13 @@ terrain::terrain() : d_hauteur{0},
                      d_nbFauves{0}
 {}
 
+terrain::~terrain()
+{
 
-terrain::terrain(int largeur, int hauteur) :  d_hauteur{hauteur}, d_largeur{largeur}, d_tabPosFauves{},  d_nbFauves{0}
+}
+
+
+terrain::terrain(int hauteur, int largeur) :  d_hauteur{hauteur}, d_largeur{largeur}, d_tabPosFauves{},  d_nbFauves{0}
 {
    d_tabElements.resize(hauteur);
    for(int i=0; i<hauteur; i++)
@@ -49,7 +54,7 @@ terrain::terrain(const terrain &t) :  d_hauteur{t.hauteur()}, d_largeur{t.largeu
 }
 
 
-void terrain::taille(int hauteur, int largeur)
+void terrain::modifierTaille(int hauteur, int largeur)
 {
    d_tabElements.resize(hauteur);
    for(int i=0; i<hauteur; i++)
@@ -61,14 +66,14 @@ void terrain::taille(int hauteur, int largeur)
    d_largeur = largeur;
 }
 
- double terrain::hauteur() const
+int terrain::hauteur() const
  {
      return d_hauteur;
  }
 
-double terrain::largeur() const
+int terrain::largeur() const
 {
-     return d_largeur;
+    return d_largeur;
 }
 
 
@@ -152,18 +157,18 @@ int terrain::nombreFauves() const
 
 void terrain::lireDepuisFichier(std::istream& ist)
 {
-   int largeur,longueur;
+   int hauteur,largeur;
    char c;
-   ist>>c>>largeur>>c>>longueur>>c;
+   ist>>c>>hauteur>>c>>largeur>>c;
 
-    taille(largeur,longueur);
+    modifierTaille(hauteur,largeur);
 
-    int cptLargeur=0, cptLongueur=0;
+    int cptHauteur=0, cptLargeur=0;
 
-    while(!ist.eof() && cptLargeur<largeur && cptLongueur <longueur)
+    while(!ist.eof() && cptHauteur<hauteur && cptLargeur <largeur)
     {
         ist>>c;
-        position p{cptLongueur,cptLargeur};
+        position p{cptHauteur,cptLargeur};
         if(c=='L')
         {
             auto ar{std::make_unique<lion>(p)};
@@ -200,7 +205,7 @@ void terrain::lireDepuisFichier(std::istream& ist)
         if(cptLargeur==largeur)
         {
             cptLargeur=0;
-            cptLongueur+=1;
+            cptHauteur+=1;
         }
     }
 }
@@ -290,7 +295,7 @@ void terrain::creeTerrain()
         std::cout<<"Type de joueur :  E (expert) ou N (normal)"<<std::endl;
         std::cin>>type;
 
-        taille(hauteur,largeur);
+        modifierTaille(hauteur,largeur);
 
 
         int lig,col;

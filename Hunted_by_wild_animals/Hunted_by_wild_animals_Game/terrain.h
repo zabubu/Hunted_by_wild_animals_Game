@@ -23,11 +23,12 @@ public :
     terrain();
     terrain(int hauteur, int largeur);
     terrain(const terrain &t);
+    ~terrain();
 
-    void taille(int hauteur, int largeur);
+    void modifierTaille(int hauteur, int largeur);
 
-    double hauteur() const;
-    double largeur() const;
+    int hauteur() const;
+    int largeur() const;
 
     const std::vector<std::vector<std::unique_ptr<elements>>>& tabElements() const;
     const std::vector<position>& tabPositionFauves() const;
@@ -61,9 +62,9 @@ public :
 
 
 private :
-    int d_nombreFauves;
     int d_hauteur;
     int d_largeur;
+    int d_nombreFauves;
     int d_nbFauves;
     std::vector<std::vector<std::unique_ptr<elements>>> d_tabElements;
     std::vector<position> d_tabPosFauves;

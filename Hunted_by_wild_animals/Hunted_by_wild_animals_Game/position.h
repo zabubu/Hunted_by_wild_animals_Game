@@ -9,6 +9,7 @@ public:
     position();
     position(int i, int j);
     position (const position &p);
+    ~position() = default;
     int getI() const;
     int getJ() const;
     void setI(int i);
