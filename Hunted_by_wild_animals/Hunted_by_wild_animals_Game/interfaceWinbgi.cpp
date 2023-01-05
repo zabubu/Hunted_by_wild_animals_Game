@@ -11,11 +11,11 @@
 constexpr int CONSTANT {110};//constante permettant un affichage centrale du jeu
 constexpr int SIZE {30};// taille d'un rectangle du terrain
 
-interfaceWinbgi::interfaceWinbgi():width{500},
-                                    height{500}
+interfaceWinbgi::interfaceWinbgi():d_width{500},
+                                    d_height{500}
 
 {
-    initialize();
+    initialise();
 }
 
 
@@ -101,8 +101,17 @@ void interfaceWinbgi::afficheJoueurNormal(const joueurNormal& a) const
     setcolor(CYAN);
     bar(BAS.getI()+CONSTANT,BAS.getJ()+CONSTANT,HAUT.getI()+CONSTANT,HAUT.getJ()+CONSTANT);
 }
-
-void interfaceWinbgi::initialize()
+unsigned interfaceWinbgi::height() const
 {
-    opengraphsize(width, height);
+    return d_height;
+}
+
+unsigned interfaceWinbgi::width() const
+{
+    return d_width;
+}
+
+void interfaceWinbgi::initialise()
+{
+    opengraphsize(width(), height());
 }

@@ -20,8 +20,8 @@ class interfaceWinbgi : public interface
     public :
 
     interfaceWinbgi();
-
-
+    unsigned width() const;
+    unsigned height() const;
     void afficheTerrain(const terrain& ter) const override;
     void afficheTigre(const tigre &t) const override;
     void afficheLion(const lion &l) const override;
@@ -31,8 +31,8 @@ class interfaceWinbgi : public interface
     void afficheJoueurNormal(const joueurNormal& a) const override;
 
     private :
-        unsigned width, height;
-        void initialize();
+        unsigned d_width, d_height;
+        void initialise();
 
 };
 
