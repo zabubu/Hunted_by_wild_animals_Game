@@ -1,3 +1,7 @@
-Groupe Hossam Yassine Sabri Yacine
-=======
+**Projet de qualité de programmation :**
+* Hossam
+* Yassine
+* Sabri 
+* Yacine
 
+Chassé par les fauves.
