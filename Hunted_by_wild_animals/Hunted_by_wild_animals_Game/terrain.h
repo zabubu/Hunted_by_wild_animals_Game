@@ -64,7 +64,6 @@ public :
 private :
     int d_hauteur;
     int d_largeur;
-    int d_nombreFauves;
     int d_nbFauves;
     std::vector<std::vector<std::unique_ptr<elements>>> d_tabElements;
     std::vector<position> d_tabPosFauves;
