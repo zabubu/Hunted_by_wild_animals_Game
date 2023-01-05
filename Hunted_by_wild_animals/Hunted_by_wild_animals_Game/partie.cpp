@@ -41,10 +41,6 @@ void partie::ajoutePiege(const position& pos)
             d_t.ajouterElement(std::make_unique<pieges>(pos), pos);
         }
     }
-    else
-    {
-        std::cerr << "ERROR: the position is not on the ground" << std::endl;
-    }
 }
 
 
@@ -66,10 +62,7 @@ void partie::ajouteLion(const position& pos)
                 d_t.ajouterElement(std::make_unique<lion>(pos),pos);
         }
     }
-    else
-    {
-        std::cerr << "ERROR: the position is not on the ground" << std::endl;
-    }
+
 }
 
 void partie::ajouteTigre(const position& pos)
@@ -90,21 +83,10 @@ void partie::ajouteTigre(const position& pos)
                 d_t.ajouterElement(std::make_unique<tigre>(pos),pos);
         }
     }
-    else
-    {
-        std::cerr << "ERROR: the position is not on the ground" << std::endl;
-    }
 }
 
 void partie::lireFichier(const std::string& nomFichier)
 {
-    if(nomFichier == "")
-    {
-        std::cout<<"ERROR: MAUVAIS FICHIER";
-    }
-
-    else
-    {
          std::ifstream ifs;
          ifs.open(nomFichier);
 
@@ -117,7 +99,6 @@ void partie::lireFichier(const std::string& nomFichier)
              d_t.lireDepuisFichier(ifs);
          }
 
-    }
 }
 
 void partie::nouveauTerrain()
@@ -204,10 +185,15 @@ void partie::joue()
                                }
                            }
 
+                           resultatPartie(joueurMort);
+
            }
 
+}
 
-           if(joueurMort == true)
+void partie::resultatPartie(bool t) const
+{
+           if(t == true)
            {
                std::cout<<"Vous avez perdu"<<std::endl;
            }

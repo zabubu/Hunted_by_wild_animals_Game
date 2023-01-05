@@ -562,7 +562,7 @@
 	<memory>
 	<iostream>
 
-1672858598 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\partie.cpp
+1672933906 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\partie.cpp
 	"partie.h"
 
 1672585906 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\hunted_by_wild_animals_game\pieges.cpp
@@ -617,10 +617,8 @@
 	<math.h>
 	"graphics.h"
 
-1672858598 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testarbres.cpp
+1672930486 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testarbres.cpp
 	"doctest.h"
-	<sstream>
-	<string>
 	"../Hunted_by_wild_animals_Game/arbres.h"
 
 1672597840 c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\doctest.h
@@ -668,22 +666,15 @@
 	<sys/time.h>
 	<unistd.h>
 
-1672924544 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testlion.cpp
+1672933883 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testlion.cpp
 	"doctest.h"
-	<sstream>
-	<string>
 	"../Hunted_by_wild_animals_Game/lion.h"
-	"../Hunted_by_wild_animals_Game/terrain.h"
-	"../Hunted_by_wild_animals_Game/joueur.h"
-	"../Hunted_by_wild_animals_Game/joueurNormal.h"
 
 1672598210 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testmain.cpp
 	"doctest.h"
 
-1672858598 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testpieges.cpp
+1672930486 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testpieges.cpp
 	"doctest.h"
-	<sstream>
-	<string>
 	"../Hunted_by_wild_animals_Game/pieges.h"
 
 1672600169 source:c:\users\kingy\documents\github\hunted_by_wild_animals_game\hunted_by_wild_animals\test_hunted_by_wild_animals_game\testposition.cpp
